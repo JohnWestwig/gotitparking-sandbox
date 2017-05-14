@@ -6,17 +6,29 @@ var config = {
     publicDir: './public',
 };
 
-gulp.task('css', function() {
-    return gulp.src('./sass/main.scss')
-    .pipe(sass({
-        includePaths: [config.bootstrapDir + '/assets/stylesheets'],
-    }))
-    .pipe(gulp.dest(config.publicDir + '/stylesheets'));
+/* Compile all .scss files into css, move them to public stylesheets directory */
+gulp.task('css', function () {
+    return gulp.src('./sass/*.scss')
+        .pipe(sass({
+            includePaths: [config.bootstrapDir + '/assets/stylesheets'],
+        }))
+        .pipe(gulp.dest(config.publicDir + '/stylesheets'));
 });
 
-gulp.task('fonts', function() {
+gulp.task('scripts', function () {
+    return gulp.src(config.bootstrapDir + '/assets/javascripts/bootstrap.min.js')
+        .pipe(gulp.dest(config.publicDir + '/javascripts'));
+});
+
+/* Bootstrap fonts */
+gulp.task('fonts', function () {
     return gulp.src(config.bootstrapDir + '/assets/fonts/**/*')
-    .pipe(gulp.dest(config.publicDir + '/fonts'));
+        .pipe(gulp.dest(config.publicDir + '/fonts'));
 });
 
-gulp.task('default', ['css', 'fonts']);
+/* Watch .scss files, recompile and move on change (Run 'gulp watch') */
+gulp.task('watch', function () {
+    gulp.watch('./sass/*.scss', ['css'])
+});
+
+gulp.task('default', ['css', 'scripts', 'fonts']);

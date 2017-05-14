@@ -1,0 +1,13 @@
+extends layout
+
+append head
+  link(rel='stylesheet', href='/stylesheets/login.css')
+
+block content
+  .row
+    .col-md-6.col-md-offset-3
+      .panel.panel-primary
+        .panel-heading
+          h3.panel-title.text-center Welcome
+        .panel-body
+          +loginForm

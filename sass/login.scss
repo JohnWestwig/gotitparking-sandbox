@@ -1,0 +1,12 @@
+@import "bootstrap/mixins";
+$login-panel-padding-top: 75px;
+
+.container {
+    margin-top: $login-panel-padding-top
+}
+
+.btn-facebook {
+    
+    //color, background, border
+    @include button-variant(white, #3b5998, #f7f7f7)
+}

@@ -1,0 +1,33 @@
+.row
+  .col-md-6.col-md-offset-3
+      .panel.panel-primary
+        .panel-heading
+          h3.panel-title.text-center Welcome
+        .panel-body
+          form(method='post')
+            .row
+              .col-md-8.col-md-offset-2
+                .input-group
+                  span#email-icon.input-group-addon
+                    i.glyphicon.glyphicon-envelope
+                  input.form-control(name='email', type='text', placeholder='E-Mail', aria-describedby='email-icon')
+            .row
+              .col-md-8.col-md-offset-2
+                .input-group
+                  span#password-icon.input-group-addon
+                    i.glyphicon.glyphicon-lock
+                  input.form-control(name='password', type='password', placeholder='Password', aria-describedby='password-icon')
+            .row
+              .col-md-8.col-md-offset-2
+                +buttonWithArrow('Log In').btn.btn-success.btn-block.btn-lg
+            hr
+            .row
+              .col-md-8.col-md-offset-2
+                +buttonWithArrow('Sign in with Facebook').btn.btn-block.btn-lg.btn-facebook
+            hr
+            .row
+              .col-md-12.text-center
+                p First time? Register
+                  | 
+                  a(href='#') here.
+                  

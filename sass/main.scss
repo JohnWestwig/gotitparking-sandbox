@@ -1,3 +1,8 @@
-@import "variables";
+@import "custom_variables";
 @import "bootstrap";
 @import "bootstrap/theme";
+
+.container {
+    padding: 10px;
+    background: white;
+}
