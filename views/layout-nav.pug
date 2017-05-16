@@ -5,7 +5,6 @@ extends layout
 
 append head
   link(rel='stylesheet', href='/stylesheets/navbar.css')
-  link(rel='stylesheet', href='/stylesheets/login.css')
   script(src='/javascripts/navbar.js')
 
 block nav
@@ -21,18 +20,18 @@ block nav
       div#bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
           li.active
-            a(href='#')
+            a(href='/home')
               | Home
           li
-            a(href='#') Park
+            a(href='/park') Park
           li
-            a(href='#') Sell
+            a(href='/sell') Sell
         ul.nav.navbar-nav.navbar-right
           li
-            a(href='#') About
-          if loggedIn
+            a(href='/about') About
+          if user && user.id
             li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Name
+                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')= user.firstName
                   span.caret
                 ul.dropdown-menu
                   li
@@ -41,7 +40,7 @@ block nav
                     a(href='#') Profile
                   li.divider(role='separator')
                   li
-                    a(href='#') Log Out
+                    a(href='/api/logout') Log Out
           else
             +loginForm
             button.btn.navbar-btn.btn-default(data-container='body', data-toggle='popover', data-placement='bottom', data-content='') Log In

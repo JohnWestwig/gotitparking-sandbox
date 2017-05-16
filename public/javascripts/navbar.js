@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    $(function () {
-        $('[data-toggle="popover"]').popover({
-            content: function() {
-                return $('#loginForm').html();
-            },
-            html: true
-        });
+    $('[data-toggle="popover"]').popover({
+        content: function () {
+            var $loginForm = $('.loginForm').clone();
+            $loginForm.addClass('visible').attr('id', "loginForm");
+            return $loginForm[0].outerHTML;
+        },
+        html: true
     });
 });

@@ -1,0 +1,6 @@
+@import "bootstrap/mixins";
+.btn-facebook {
+    
+    //color, background, border
+    @include button-variant(white, #3b5998, #f7f7f7)
+}

@@ -1,5 +1,8 @@
 /*.popover {
     max-width: 100%;
 }*/
-#loginForm {
+.loginForm {
   display: none; }
+
+.loginForm.visible {
+  display: block; }

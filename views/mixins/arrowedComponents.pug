@@ -1,0 +1,11 @@
+mixin buttonWithArrow(btnText)
+  button(id!=attributes.id, class!=attributes.class, type!=attributes.type)= btnText
+    |
+    |
+    i.glyphicon.glyphicon-arrow-right
+    
+mixin linkWithArrow(href, btnText)
+  a(id!=attributes.id, class!=attributes.class, href=href)= btnText
+    |
+    |
+    i.glyphicon.glyphicon-arrow-right

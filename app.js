@@ -10,6 +10,11 @@ var config = require('./config/config');
 
 var routes = require('./routes');
 
+var session = require('express-session');
+var passport = require('passport');
+
+var flash = require('connect-flash');
+
 var app = express();
 
 // view engine setup
@@ -25,7 +30,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-app.use(cookieParser());
+app.use(cookieParser('shhhh, very secret'));
+app.use(session({
+    name: "gotitparkingsessid",
+    resave: false, // don't save session if unmodified
+    saveUninitialized: false, // don't create session until something stored
+    secret: 'shhhh, very secret'
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash()); // use connect-flash for flash messages stored in session
+
+
 /*app.use(
     sassMiddleware({
         src: __dirname + '/sass',

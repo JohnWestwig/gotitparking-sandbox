@@ -11,6 +11,21 @@ var errors = {
     4004: {
         msg: "Incorrect password"
     },
+    4005: {
+        msg: "No first name provided"  
+    },
+    4006: {
+        msg: "No last name provided"
+    },
+    4007: {
+        msg: "User not verified"
+    },
+    4008: {
+        msg: "Email already in use"
+    },
+    4009: {
+        msg: "Invalid registration token"
+    },
     5000: {
         msg: "Database error (unknown)"
     },

@@ -8,8 +8,10 @@ html
       link(href='https://fonts.googleapis.com/css?family=Muli', rel='stylesheet')
       script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
       script(src='/javascripts/bootstrap.min.js')
+      script.
+        urlParams = !{urlParams};
   body
-    include mixins/utils
+    include mixins/all
     block nav
     div.container
       block content

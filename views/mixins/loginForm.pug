@@ -1,17 +1,10 @@
-mixin buttonWithArrow(btnText)
-  button(id!=attributes.id, class!=attributes.class)= btnText
-    |
-    |
-    i.glyphicon.glyphicon-arrow-right
-    
-mixin linkWithArrow(href, btnText)
-  a(id!=attributes.id, class!=attributes.class, href=href)= btnText
-    |
-    |
-    i.glyphicon.glyphicon-arrow-right
-    
-mixin loginForm    
-  form#loginForm(method='post')
+mixin loginForm
+  script(src='/javascripts/loginForm.js')
+  link(rel='stylesheet', href='/stylesheets/loginForm.css')
+  form.loginForm(method='post' action='/api/login')
+    .row
+      .col-md-12
+        .loginErrors
     .row
       .col-md-12
         .input-group
@@ -26,15 +19,15 @@ mixin loginForm
           input.form-control(name='password', type='password', placeholder='Password', aria-describedby='password-icon')
     .row
       .col-md-12
-        +buttonWithArrow('Log In').btn.btn-primary.btn-block.btn-lg
+        +buttonWithArrow('Log In')(type='submit').btn.btn-success.btn-block.btn-lg
     hr
     .row
       .col-md-12
-        +buttonWithArrow('Sign in with Facebook').btn.btn-block.btn-lg.btn-facebook
+        +linkWithArrow('/api/login/facebook', 'Sign in with Facebook').btn.btn-block.btn-lg.btn-facebook
     hr
     .row
       .col-md-12.text-center
         p First time? Register
           | 
-          a(href='#') here.
+          a(href='/register') here.
                   

@@ -1,0 +1,12 @@
+/*.popover {
+    max-width: 100%;
+}*/
+/* line 5, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+.loginForm {
+  display: none; }
+
+/* line 9, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+.loginForm.visible {
+  display: block; }
+
+/*# sourceMappingURL=navbar.css.map */

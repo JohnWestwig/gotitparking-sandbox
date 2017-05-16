@@ -9,9 +9,10 @@ block content
       img.img-responsive.img-rounded(src='images/ku_action.jpg')
     .col-md-4
       h1 GotIt! Parking
+      h2= message
       hr
       p.text-primary Welcome to the future
       p Park where you want, when you want, hassle-free.  GotIt! Parking provides a simple, intuitive platform for parkers and owners alike
       .row
-        .col-md-11.text-right
-          +linkWithArrow('about.php', 'Learn More').btn.btn-primary.btn-lg
+        .col-md-12.text-right
+          +linkWithArrow('/about', 'Learn More').btn.btn-primary.btn-lg
