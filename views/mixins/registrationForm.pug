@@ -1,32 +1,32 @@
 mixin registrationForm
   link(rel='stylesheet', href='/stylesheets/registrationForm.css')
-  form.registrationForm(method='post' action='/api/register')
+  .registrationForm(method='post' action='/api/register')
     .row
       .col-md-12
-        .registrationErrors
+        .registerErrors
     .row
       .col-md-12
         .input-group
           span#email-icon.input-group-addon
             i.glyphicon.glyphicon-envelope
-          input.form-control(name='email', type='text', placeholder='E-Mail', aria-describedby='email-icon')
+          input.registerEmail.form-control(name='email', type='text', placeholder='E-Mail', aria-describedby='email-icon')
     .row
       .col-md-12
         .input-group
           span#password-icon.input-group-addon
             i.glyphicon.glyphicon-lock
-          input.form-control(name='password', type='password', placeholder='Password', aria-describedby='password-icon')
+          input.registerPassword.form-control(name='password', type='password', placeholder='Password', aria-describedby='password-icon')
     .row
       .col-md-12
         .input-group
           span#user-icon.input-group-addon
             i.glyphicon.glyphicon-user
-          input.form-control(name='firstName', type='text', placeholder='First name', aria-describedby='user-icon')
-          input.form-control(name='lastName', type='text', placeholder='Last name', aria-describedby='user-icon')
+          input.registerFirstName.form-control(name='firstName', type='text', placeholder='First name', aria-describedby='user-icon')
+          input.registerLastName.form-control(name='lastName', type='text', placeholder='Last name', aria-describedby='user-icon')
 
     .row
       .col-md-12
-        +buttonWithArrow('Register')(type='submit').btn.btn-success.btn-block.btn-lg
+        +buttonWithArrow('Register').registerButton.btn.btn-success.btn-block.btn-lg
     hr
     .row
       .col-md-12
