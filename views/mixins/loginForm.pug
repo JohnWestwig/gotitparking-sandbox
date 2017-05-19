@@ -1,29 +1,29 @@
 mixin loginForm
-  script(src='/javascripts/loginForm.js')
+  //script(src='/javascripts/loginForm.js')
   link(rel='stylesheet', href='/stylesheets/loginForm.css')
-  form.loginForm(method='post' action='/api/login')
+  div.loginForm
     .row
       .col-md-12
-        .loginErrors
+        .loginErrors#loginErrors
     .row
       .col-md-12
         .input-group
           span#email-icon.input-group-addon
             i.glyphicon.glyphicon-envelope
-          input.form-control(name='email', type='text', placeholder='E-Mail', aria-describedby='email-icon')
+          input.loginEmail.form-control(name='email', type='text', placeholder='E-Mail', aria-describedby='email-icon')
     .row
       .col-md-12
         .input-group
           span#password-icon.input-group-addon
             i.glyphicon.glyphicon-lock
-          input.form-control(name='password', type='password', placeholder='Password', aria-describedby='password-icon')
+          input.loginPassword.form-control(name='password', type='password', placeholder='Password', aria-describedby='password-icon')
     .row
       .col-md-12
-        +buttonWithArrow('Log In')(type='submit').btn.btn-success.btn-block.btn-lg
+        +buttonWithArrow('Log In').loginButton.btn.btn-success.btn-block.btn-lg
     hr
     .row
       .col-md-12
-        +linkWithArrow('/api/login/facebook', 'Sign in with Facebook').btn.btn-block.btn-lg.btn-facebook
+        +loginWithFacebookButton()
     hr
     .row
       .col-md-12.text-center

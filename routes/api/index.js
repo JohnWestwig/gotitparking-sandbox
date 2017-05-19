@@ -1,37 +1,32 @@
 var express = require('express');
 var router = express.Router();
-
-
+var jwt = require('jsonwebtoken');
 
 module.exports = function (app) {
     var db = require('./db').connect(app);
 
-    //var authRouter = require('./auth')(app, db);
-
     router.get('/', function (req, res) {
-        console.log(req.session);
-        res.json({
-            session: req.session
-        });
+        res.sendStatus(200);
     });
-    
-    function validateUser(req, res, next) {
-        if (req.session.userId) {
+
+    function validateUser (req, res, next) {
+        /* TODO: decide where the fuck this token should be */
+        console.log(req.body);
+        if (req.body.user) {
             next();
         } else {
-            res.redirect('/login');
+            res.sendStatus(401);
         }
     }
 
-    router.use('/login', require('./auth')(app, db));
-    router.use('/logout', require('./logout')());
+    router.use('/login', require('./login')(app, db));
     router.use('/register', require('./register')(app, db));
-    
-    router.get('/test', validateUser, function(req, res) {
+
+    router.get('/test', validateUser, function (req, res) {
         res.json({
-            hello: "world"
+            user: req.body.user
         });
     });
-    
+
     return router;
 };

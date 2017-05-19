@@ -1,4 +1,7 @@
 var errors = {
+    4000: {
+        msg: "Field empty or not provided"  
+    },
     4001: {
         msg: "No email provided"
     },
@@ -34,8 +37,8 @@ var errors = {
     }
 };
 
-exports.send = function (res, errorCodes) {
-    var responseCode = ((errorCodes[0] / 1000) == 4) ? 400 : 500;
+module.exports.send = function (res, errorCodes) {
+    var responseCode = (Math.floor(errorCodes[0] / 1000) == 4) ? 400 : 500;
     var response = [];
     errorCodes.forEach(function (val, i) {
         response.push({
@@ -43,6 +46,6 @@ exports.send = function (res, errorCodes) {
             error: errors[val]
         });
     });
-
+    
     res.status(responseCode).json({errors: response});
 };

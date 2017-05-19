@@ -31,6 +31,7 @@ module.exports = function (app, db) {
                 }, jwtSecret, {
                     expiresIn: '1h'
                 });
+                /* TODO: catch email errors */
                 sendRegistrationEmail(app.locals.config.email.address, app.locals.config.email.password, email, token);
                 res.send(200);
             }, function (codes) {
@@ -40,10 +41,9 @@ module.exports = function (app, db) {
     });
 
     router.get('/verify/:verificationCode', function (req, res) {
-        console.log("hello");
         jwt.verify(req.params.verificationCode, jwtSecret, function (error, decoded) {
             if (error) {
-                apiError.send([4009]);
+                apiError.send(res, [4009]);
             } else {
                 var userId = decoded.id;
                 makeVerified(userId, function () {
@@ -55,50 +55,104 @@ module.exports = function (app, db) {
         });
     });
 
+    router.post('/facebook', function (req, res) {
+        var email = req.body.email,
+            firstName = req.body.firstName,
+            lastName = req.body.lastName,
+            facebookId = req.body.facebookId;
+
+        if (!email) {
+            apiError.send(res, [4001])
+        } else if (!facebookId) {
+            apiError.send(res, [4002]);
+        } else if (!firstName) {
+            apiError.send(res, [4005]);
+        } else if (!lastName) {
+            apiError.send(res, [4006]);
+        } else {
+            registerFacebook(firstName, lastName, email, facebookId, function () {
+                res.sendStatus(200);
+            }, function (errors) {
+                apiError.send(res, errors);
+            });
+        }
+    });
+
+
     function register(firstName, lastName, email, password, successHandler, errorHandler) {
         bcrypt.hash(password, null, null, function (error, hash) {
             if (error) {
                 errorHandler([5001])
             } else {
-                /* TODO: check email before inserting user cols */
-                var query = {
-                    sql: 'INSERT INTO users (first_name, last_name) VALUES (?, ?);' +
-                        'SET @user_id = LAST_INSERT_ID();' +
-                        'INSERT INTO auths (user_id, email, password) VALUES (@user_id, ?, ?);' +
-                        'SELECT @user_id AS user_id;',
-                    values: [firstName, lastName, email, hash]
-                };
-                db.query(query.sql, query.values, function (error, results) {
-                    if (error) {
-                        switch (error.errno) {
-                            case 1062:
-                                errorHandler([4008]);
-                                break;
-                            default:
-                                errorHandler([5000]);
-                        }
-                    } else {
-                        //Send email
-                        successHandler(results[3][0].user_id);
-                    }
-                });
+                db('users')
+                    .insert([{
+                        first_name: firstName,
+                        last_name: lastName,
+                        email: email
+                    }], 'id')
+                    .then(function (id) {
+                        return db('auths').insert([{
+                            user_id: id,
+                            password: hash
+                        }]).then(function () {
+                            successHandler(id);
+                        });
+                    })
+                    .catch(function (error) {
+                        errorHandler([5000]);
+                    });
             }
         });
     }
 
     function makeVerified(userId, successHandler, errorHandler) {
-        var query = {
-            sql: 'UPDATE auths SET verified = 1 WHERE user_id = ?',
-            values: [userId]
-        };
-        db.query(query.sql, query.values, function (error, results) {
-            if (error) {
+        db('auths')
+            .update({
+                verified: 1
+            })
+            .where('user_id', userId)
+            .then(successHandler)
+            .catch(function (error) {
+                errorHandler([5000]);
+            });
+    }
+
+    function registerFacebook(firstName, lastName, email, facebookId, successHandler, errorHandler) {
+        db('users')
+            .insert([{
+                first_name: firstName,
+                last_name: lastName,
+                email: email
+            }], 'id')
+            .then(function (id) {
+                return db('auths_facebook')
+                    .insert([{
+                        user_id: id,
+                        facebook_id: facebookId
+                    }])
+                    .then(function () {
+                        successHandler(id);
+                    });
+            })
+            .catch(function (error) {
                 console.log(error);
                 errorHandler([5000]);
+            });
+        /* TODO: merge accounts if email in use */
+        /*var query = {
+            sql: 'INSERT INTO users (first_name, last_name) VALUES (?, ?);' +
+                'SET @user_id = LAST_INSERT_ID();' +
+                'INSERT INTO auths (user_id, email, facebook_id, verified) VALUES (@user_id, ?, ?, 1);' +
+                'SELECT users.id, first_name, last_name FROM auths JOIN users ON users.id = auths.user_id WHERE facebook_id = ?',
+            values: [profile.name.givenName, profile.name.familyName, profile.emails[0].value, profile.id, profile.id]
+        };
+        db.query(query.sql, query.values, function (err, results) {
+            if (err) {
+                errorHandler([5000]);
             } else {
-                successHandler(results);
+                successHandler(results[3][0]);
             }
-        });
+        });*/
     }
 
     return router;

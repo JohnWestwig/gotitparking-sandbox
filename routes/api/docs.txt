@@ -1,0 +1,10 @@
+/login:
+  POST (password, email) -> {token}
+    email and password must be valid
+    user must have already verified account via email
+    
+/login/facebook: 
+  POST (facebookId) -> {token}
+
+/register:
+  POST (password, email, firstName, lastName)

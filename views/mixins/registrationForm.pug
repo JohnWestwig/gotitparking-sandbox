@@ -1,5 +1,4 @@
 mixin registrationForm
-  script(src='/javascripts/registrationForm.js')
   link(rel='stylesheet', href='/stylesheets/registrationForm.css')
   form.registrationForm(method='post' action='/api/register')
     .row
@@ -31,5 +30,4 @@ mixin registrationForm
     hr
     .row
       .col-md-12
-        +linkWithArrow('/api/register/facebook', 'Sign up with Facebook').btn.btn-block.btn-lg.btn-facebook
-    
+        +registerWithFacebookButton()

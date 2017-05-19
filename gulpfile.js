@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 
 var config = {
     bootstrapDir: './bower_components/bootstrap-sass',
+    cookieJsDir: './bower_components/cookie-js',
     publicDir: './public',
 };
 
@@ -17,7 +18,7 @@ gulp.task('css', function () {
 
 gulp.task('scripts', function () {
     return gulp.src(config.bootstrapDir + '/assets/javascripts/bootstrap.min.js')
-        .pipe(gulp.dest(config.publicDir + '/javascripts'));
+        .pipe(gulp.dest(config.publicDir + '/javascripts/libs'));
 });
 
 /* Bootstrap fonts */

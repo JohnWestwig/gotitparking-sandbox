@@ -9,4 +9,8 @@
 .loginForm.visible {
   display: block; }
 
+/* line 13, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+#navbarLogin {
+  margin-left: 15px; }
+
 /*# sourceMappingURL=navbar.css.map */
