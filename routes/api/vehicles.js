@@ -46,6 +46,14 @@ module.exports = function (app, db) {
             apiError.send(res, errors);
         });
     });
+    
+    router.delete('/:vehicleId', function (req, res) {
+        deleteVehicle(req.body.user.id, req.params.vehicleId, function () {
+            res.sendStatus(200);
+        }, function (errors) {
+            apiError.send(res, errors);
+        });
+    });
 
     function getVehicles(userId, successHandler, errorHandler, vehicleId) {
         db('vehicles')
@@ -84,6 +92,7 @@ module.exports = function (app, db) {
             })
             .then(successHandler)
             .catch(function (error) {
+                console.log(error);
                 errorHandler([5000]);
             })
     }
@@ -101,6 +110,19 @@ module.exports = function (app, db) {
                 user_id: userId,
                 id: vehicleId
             })
+            .then(successHandler)
+            .catch(function (error) {
+                errorHandler([5000]);
+            });
+    }
+
+    function deleteVehicle(userId, vehicleId, successHandler, errorHandler) {
+        db('vehicles')
+            .where({
+                user_id: userId,
+                id: vehicleId
+            })
+            .del()
             .then(successHandler)
             .catch(function (error) {
                 errorHandler([5000]);
