@@ -1,0 +1,30 @@
+extends layout-nav
+
+append head
+  script(src='/javascripts/app/profile.js')
+  link(rel='stylesheet', type='text/css', href='/stylesheets/settings.css')
+
+block content
+  .container
+    .row
+      .col-md-2.col-xs-4
+          if user && user.id
+            h3.text-center= (user.name.first + " " + user.name.last)
+            hr
+            .list-group
+              a(href='/profile/activity', class=(section == 'activity') ? 'active' : '').list-group-item My Activity
+              a(href='/profile/settings', class=(section == 'settings') ? 'active' : '').list-group-item Settings
+            hr
+          else
+            h3.text-center GotIt! Parking
+            hr
+          .list-group
+            a(href='/profile/privacy', class=(section == 'privacy') ? 'active' : '').list-group-item Privacy Policy
+            a(href='/profile/terms', class=(section == 'terms') ? 'active' : '').list-group-item Terms of Service
+            a(href='/profile/faq', class=(section == 'faq') ? 'active' : '').list-group-item F.A.Q.
+          if user && user.id
+            hr
+            button(href='#')#logoutButton.btn.btn-md.btn-primary Log Out
+      .col-md-8.col-xs-6.col-md-offset-1.col-xs-offset-1
+          if section && (section == 'settings')
+            include modules/settings.pug

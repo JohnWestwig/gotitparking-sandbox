@@ -9,12 +9,14 @@ html
       link(rel='stylesheet', href='/stylesheets/main.css')
       link(rel='stylesheet', href='/stylesheets/layout.css')
       link(href='https://fonts.googleapis.com/css?family=Muli', rel='stylesheet')
+      script(src="https://use.fontawesome.com/c8c02e8b99.js")
       
-      script(src='/javascripts/libs/require.js', data-main='javascripts/loaderMain')
+      script(src='/javascripts/libs/require.js')
+      script(src='/javascripts/app/main.js')
+      //-script(src='/javascripts/libs/require.js', data-main='javascripts/loaderMain')
       script.
         facebookAppId = #{facebookAppId};
   body
     include mixins/all
     block nav
-    div.container
-      block content
+    block content

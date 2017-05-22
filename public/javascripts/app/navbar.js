@@ -1,3 +1,6 @@
+require.config({
+    baseUrl: '/javascripts/libs'
+});
 require(['./common'], function (common) {
     require(["jquery", "app/utils/auth", "bootstrap"], function ($, Auth) {
         $(document).ready(function () {
@@ -11,7 +14,8 @@ require(['./common'], function (common) {
             });
 
             $('#navbarLogin').on('inserted.bs.popover', function () {
-                Auth.initLogin($('#loginForm').find('.loginButton'),
+                Auth.initLogin(
+                    $('#loginForm').find('.loginButton'),
                     $('#loginForm').find('.loginEmail'),
                     $('#loginForm').find('.loginPassword'),
                     $('#loginForm').find('.loginErrors'));

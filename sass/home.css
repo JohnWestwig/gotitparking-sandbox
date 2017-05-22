@@ -1,12 +1,15 @@
+/* line 1, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .table.no-border tr td,
 .table.no-border tr th {
   border-width: 0; }
 
+/* line 5, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 #transactions_header {
   font-weight: 600;
   margin-bottom: 25px;
   margin-top: 0px; }
 
+/* line 10, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .transaction-date {
   font-style: italic; }
 
@@ -20,6 +23,7 @@
 #welcome_message {
     margin: 0 auto;
 }*/
+/* line 25, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-circle-expand {
   background-color: black;
   border-radius: 50%;
@@ -32,58 +36,74 @@
   transition: background-color .3s;
   width: 40px; }
 
+/* line 37, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-circle-expand-lg {
   height: 60px;
   line-height: 60px;
   width: 60px; }
 
+/* line 42, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-circle-expand .fa,
 .btn-circle-expand i {
   backface-visibility: hidden;
   transform: scale(1);
   transition: all .25s; }
 
+/* line 48, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-circle-expand:hover,
 .btn-circle-expand:focus {
   color: #fff;
   outline: none;
   text-decoration: none; }
 
+/* line 54, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-circle-expand:hover .fa,
 .btn-circle-expand:focus .fa,
 .btn-circle-expand:hover i,
 .btn-circle-expand:focus i {
   transform: scale(1.2); }
 
+/* line 60, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .vcenter {
   vertical-align: middle;
   float: 0;
   display: inline-block; }
 
+/* line 65, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .vcenter * {
   vertical-align: middle; }
 
+/* line 68, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-directions {
   background-color: #337ab7; }
 
+/* line 71, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-share {
   background-color: #5cb85c; }
 
+/* line 74, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-sell {
   background-color: #337ab7; }
 
+/* line 77, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .btn-buy {
   background-color: #5cb85c; }
 
+/* line 80, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 [data-toggle="tooltip"] {
   z-index: 9999; }
 
+/* line 83, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 #football_menu_wrapper {
   padding-bottom: 30px; }
 
+/* line 86, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .gray-text {
   color: #636568; }
 
+/* line 89, /Users/John/gotitparking/sandbox/gotitparking/sass/home.scss */
 .justified {
   text-align: justify;
   text-justify: inter-word; }
+
+/*# sourceMappingURL=home.css.map */

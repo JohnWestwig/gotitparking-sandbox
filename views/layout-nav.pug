@@ -8,7 +8,7 @@ append head
   script(src='/javascripts/app/navbar.js')
 
 block nav
-  nav.navbar.navbar-default
+  nav.navbar.navbar-default.navbar-static-top
     div.container-fluid
       div.navbar-header
         button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
@@ -30,22 +30,13 @@ block nav
           li(class=(page == 'about') ? 'active' : '')
             a(href='/about') About
           if user && user.id
-            li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')= user.name.first
-                  span.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Settings
-                  li
-                    a(href='#') Profile
-                  li.divider(role='separator')
-                  li
-                    a(href='#')#navbarLogout Log Out
+            li(class=(page == 'profile') ? 'active' : '')
+              a(href='/profile')= user.name.first
+                |
+                |
+                i.fa.fa-user
           else
             +loginForm
             li
               button#navbarLogin.btn.navbar-btn.btn-default(data-container='body', data-toggle='popover', data-placement='bottom', data-content='') Log In
               
-    
-    
-  

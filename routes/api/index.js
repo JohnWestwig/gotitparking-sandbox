@@ -21,6 +21,7 @@ module.exports = function (app) {
 
     router.use('/login', require('./login')(app, db));
     router.use('/register', require('./register')(app, db));
+    router.use('/vehicles', validateUser, require('./vehicles')(app, db));
 
     router.get('/test', validateUser, function (req, res) {
         res.json({

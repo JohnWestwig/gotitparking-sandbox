@@ -5,7 +5,7 @@ var jwt = require('jsonwebtoken');
 module.exports = function (app) {
 
     router.use(function (req, res, next) {
-        var token = req.cookies.token || req.headers['x-token'];
+        var token = req.headers['x-token'] || req.cookies.token;
         console.log("token", token);
         if (token) {
             jwt.verify(token, app.locals.config.jwt.secret, function (error, decoded) {
@@ -33,7 +33,15 @@ module.exports = function (app) {
     router.get('/about', render("about", {}));
     router.get('/login', render("login", {}));
     router.get('/register', render("register", {}));
-    router.get('/home', render("home", {}));
+    router.get(['/home', '/home/test'], render("home", {}));
+    router.get('/profile', function (req, res) {
+        if (req.body.user) {
+            res.redirect('/profile/activity');
+        } else {
+            res.redirect('/profile/privacy');
+        }
+    });
+    router.get('/profile/:section', render("profile", {}));
 
     /* Send some default parameters to all layouts, merge with custom parameters. */
     function render(name, params) {
@@ -43,7 +51,8 @@ module.exports = function (app) {
                 title: name.charAt(0).toUpperCase() + name.slice(1),
                 user: req.body.user,
                 urlParams: JSON.stringify(req.query),
-                facebookAppId: app.locals.config.facebook.appId
+                facebookAppId: app.locals.config.facebook.appId,
+                section: req.params.section
             };
             Object.assign(defaultParams, params);
             res.render(name, defaultParams);

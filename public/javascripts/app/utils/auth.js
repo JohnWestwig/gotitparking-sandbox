@@ -1,7 +1,11 @@
 define(['jquery', 'app/utils/apiRequest', 'app/utils/tokenManager', 'facebook'], function ($, ApiRequest, TokenManager, FB) {
     var onLoginSuccess = function (token, destination) {
         TokenManager.setToken(token);
-        window.location.href = destination ? destination : '/home';
+        if (destination) {
+            window.location.href = destination;
+        } else {
+            window.location.reload();
+        }
     };
     var onRegisterSuccess = function ($messageContainer) {
         $messageContainer.empty();
@@ -49,7 +53,7 @@ define(['jquery', 'app/utils/apiRequest', 'app/utils/tokenManager', 'facebook'],
         logout: function (destination) {
             var next = function () {
                 if (destination) {
-                    window.location.href = desintation;
+                    window.location.href = destination;
                 } else {
                     window.location.reload();
                 }
