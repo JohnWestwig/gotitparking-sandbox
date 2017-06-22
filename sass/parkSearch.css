@@ -1,0 +1,42 @@
+/* line 1, /Users/John/gotitparking/sandbox/gotitparking/sass/parkSearch.scss */
+#modalSearchBar {
+  height: 50px;
+  font-size: 32px;
+  border: none;
+  border-bottom: 3px solid #B82601;
+  outline-width: 0;
+  width: 100%;
+  margin-bottom: 3px; }
+
+/* line 10, /Users/John/gotitparking/sandbox/gotitparking/sass/parkSearch.scss */
+.autocomplete-suggestions {
+  border: 3px solid #B82601;
+  border-top: none;
+  background: #FFF;
+  overflow: auto; }
+
+/* line 16, /Users/John/gotitparking/sandbox/gotitparking/sass/parkSearch.scss */
+.autocomplete-suggestion {
+  padding: 10px 5px;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* line 21, /Users/John/gotitparking/sandbox/gotitparking/sass/parkSearch.scss */
+.autocomplete-selected {
+  background: #F0F0F0; }
+
+/* line 24, /Users/John/gotitparking/sandbox/gotitparking/sass/parkSearch.scss */
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF; }
+
+/* line 28, /Users/John/gotitparking/sandbox/gotitparking/sass/parkSearch.scss */
+.autocomplete-group {
+  padding: 2px 5px; }
+
+/* line 31, /Users/John/gotitparking/sandbox/gotitparking/sass/parkSearch.scss */
+.autocomplete-group strong {
+  display: block;
+  border-bottom: 1px solid #000; }
+
+/*# sourceMappingURL=parkSearch.css.map */

@@ -8,6 +8,14 @@ require(['./common'], function (common) {
                 e.preventDefault();
                 Auth.logout('/profile');
             });
+            
+            $("#settings-sublinks").on('hide.bs.collapse show.bs.collapse', function () {
+                $('a[data-target="#settings-sublinks"] i').toggleClass('hidden');
+            });
+            
+            if ($("#settings-sublinks a.active").length) {
+                $('#settings-sublinks').collapse('show');
+            }
         });
     });
 });

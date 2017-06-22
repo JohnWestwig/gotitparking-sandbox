@@ -1,0 +1,52 @@
+#parkSearchContainer {
+  background: white;
+  margin-top: 50px; }
+
+.row {
+  background: transparent; }
+
+.container-fluid {
+  background: transparent; }
+
+.navbar {
+  margin-bottom: 0; }
+
+#mapContainer {
+  height: 800px; }
+
+#currentEvent {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  width: 400px;
+  background: white;
+  z-index: 9999;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box; }
+
+#searchResultsContainer {
+  height: 800px;
+  background: white;
+  z-index: 9999;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box; }
+
+p.eventType,
+p.eventName,
+p.eventVenue {
+  padding: 6px; }
+
+p.eventType {
+  font-size: 20px;
+  margin-bottom: 0; }

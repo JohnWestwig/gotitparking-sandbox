@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "file": "vehicles.css",
+  "sources": [
+    "vehicles.scss"
+  ],
+  "mappings": ";AAIA,AAAA,aAAa,CAAC;EACV,YAAY,EAAE,GAAI,GACrB",
+  "names": []
+}

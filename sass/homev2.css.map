@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "file": "homev2.css",
+  "sources": [
+    "homev2.scss"
+  ],
+  "mappings": ";AAAA,AAAA,gBAAgB,EAAE,AAAmB,gBAAH,GAAG,cAAc;AACnD,AAAA,gBAAgB,EAAE,AAAmB,gBAAH,GAAG,cAAc,CACnD;EACI,YAAY,EAAE,CAAE;EAChB,aAAa,EAAE,CAAE,GACpB",
+  "names": []
+}

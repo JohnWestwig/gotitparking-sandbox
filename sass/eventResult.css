@@ -1,0 +1,63 @@
+/* line 4, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result {
+  padding-bottom: 20px; }
+
+/* line 8, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-date {
+  background: #fe9f87;
+  height: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+/* line 14, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-date-day {
+  color: white;
+  font-weight: 100;
+  font-size: 36px;
+  padding-top: 5px; }
+
+/* line 20, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-date-month {
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  padding-bottom: 5px; }
+
+/* line 26, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-content {
+  background: #efeded;
+  height: 100px; }
+
+/* line 30, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-sport {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 24px; }
+
+/* line 35, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px; }
+
+/* line 40, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-continue {
+  height: 100px;
+  line-height: 100px; }
+
+/* line 45, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-continue:hover .event-result-continue-button {
+  transform: scale(1.1, 1.32);
+  color: #fe8b6d;
+  cursor: pointer; }
+
+/* line 51, /Users/John/gotitparking/sandbox/gotitparking/sass/eventResult.scss */
+.event-result-continue-button {
+  transition: all .1s ease-in-out;
+  transform: scale(1, 1.2);
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  color: #fe9f87; }
+
+/*# sourceMappingURL=eventResult.css.map */

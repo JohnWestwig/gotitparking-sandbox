@@ -1,6 +1,6 @@
-/*.popover {
-    max-width: 100%;
-}*/
+.popover {
+  z-index: 99999; }
+
 .loginForm {
   display: none; }
 
@@ -10,3 +10,6 @@
 #navbarLogin {
   margin-left: 15px;
   margin-right: 15px; }
+
+nav > .container-fluid {
+  background: transparent; }

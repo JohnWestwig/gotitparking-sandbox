@@ -3,9 +3,25 @@ extends layout-nav
 append head
   script(src='/javascripts/app/profile.js')
   link(rel='stylesheet', type='text/css', href='/stylesheets/settings.css')
+  
+//- <div id="menu">
+//-<div class="panel list-group">
+ <a href="#" class="list-group-item" data-toggle="collapse" data-target="#sm" data-parent="#menu">MESSAGES <span class="label label-info">5</span> <span class="glyphicon glyphicon-envelope pull-right"></span></a>
+ <div id="sm" class="sublinks collapse">
+  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> inbox</a>
+  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> sent</a>
+ </div>
+ <a href="#" class="list-group-item" data-toggle="collapse" data-target="#sl" data-parent="#menu">TASKS <span class="glyphicon glyphicon-tag pull-right"></span></a>
+ <div id="sl" class="sublinks collapse">
+  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> saved tasks</a>
+  <a class="list-group-item small"><span class="glyphicon glyphicon-chevron-right"></span> add new task</a>
+ </div>
+ <a href="#" class="list-group-item">ANOTHER LINK ...<span class="glyphicon glyphicon-stats pull-right"></span></a>
+//-</div>
+//-</div>
 
 block content
-  .container
+  .container-fluid
     .row
       .col-md-2.col-xs-4
           if user && user.id
@@ -13,7 +29,22 @@ block content
             hr
             .list-group
               a(href='/profile/activity', class=(section == 'activity') ? 'active' : '').list-group-item My Activity
-              a(href='/profile/settings', class=(section == 'settings') ? 'active' : '').list-group-item Settings
+              a(href='#', data-toggle='collapse' data-target='#settings-sublinks').list-group-item Settings
+                i.pull-right.fa.fa-lg.fa-caret-down
+                i.pull-right.fa.fa-lg.fa-caret-up.hidden
+              div#settings-sublinks.collapse
+                a(href='/profile/settings/account', class=(section == 'account') ? 'active' : '').list-group-item 
+                  i.fa.fa-caret-right
+                  | 
+                  | Account
+                a(href='/profile/settings/parkers', class=(section == 'parkers') ? 'active' : '').list-group-item 
+                  i.fa.fa-caret-right
+                  | 
+                  | Parkers
+                a(href='/profile/settings/sellers', class=(section == 'sellers') ? 'active' : '').list-group-item 
+                  i.fa.fa-caret-right
+                  | 
+                  | Sellers
             hr
           else
             h3.text-center GotIt! Parking
@@ -24,7 +55,11 @@ block content
             a(href='/profile/faq', class=(section == 'faq') ? 'active' : '').list-group-item F.A.Q.
           if user && user.id
             hr
-            button(href='#')#logoutButton.btn.btn-md.btn-primary Log Out
-      .col-md-8.col-xs-6.col-md-offset-1.col-xs-offset-1
-          if section && (section == 'settings')
-            include modules/settings.pug
+            button(href='#')#logoutButton.btn.btn-md.btn-primary.center-block Log Out
+      .col-md-8.col-xs-8.col-md-offset-1
+          if section && (section == 'parkers')
+            include modules/settingsParkers.pug
+          else if section && (section == 'account')
+            include modules/settingsAccount.pug
+          else if section && (section == 'sellers')
+            include modules/settingsSellers.pug

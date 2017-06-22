@@ -1,0 +1,38 @@
+script(src='/javascripts/app/controllers/VehicleManager.js')
+link(rel='stylesheet', type='text/css', href='/stylesheets/vehicles.css')
+.row
+  .col-md-12.col-xs-12
+    .list-group.vehicle-list
+  .col-md-6.col-md-offset-3.col-xs-12
+    button.btn.btn-primary.btn-lg.btn-block.add-vehicle(data-toggle='modal', data-target='#vehicleModal') Add Vehicle
+    
+.modal.fade#vehicleModal
+  .modal-dialog
+    .modal-content
+      input(type='hidden').vehicle-id
+      .modal-header
+        button.close(type='button', class='close', data-dismiss='modal') &times;
+        h4.modal-title.vehicle-modal-title Add Vehicle
+      .modal-body
+        .row.form-group
+          label.col-md-2.col-xs-2(for='vehicle-plate') Plate
+          .col-md-4.col-xs-4
+            input(type='text', placeholder='ABC1234').form-control.vehicle-plate
+          label.col-md-2.col-xs-2(for='vehicle-color') Color
+          .col-md-4.col-xs-4
+            input(type='text', placeholder='Green').form-control.vehicle-color
+        .row.form-group
+          label.col-md-2.col-xs-2(for='vehicle-make') Make
+          .col-md-4.col-xs-4
+            input(type='text', placeholder='Honda').form-control.vehicle-make
+          label.col-md-2.col-xs-2(for='vehicle-model') Model
+          .col-md-4.col-xs-4
+            input(type='text', placeholder='Accord').form-control.vehicle-model
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        button.btn.btn-primary.save-vehicle(type='button') Save changes
+
+    // .list-group-item.justify-content-between 
+        span Blue Honda Accord APS7123
+        a.pull-right Remove
+        a.pull-right.edit-link Edit

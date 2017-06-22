@@ -1,0 +1,29 @@
+extends layout-nav
+
+append head
+  link(rel='stylesheet', type='text/css', href='/stylesheets/park.css')
+  link(rel='stylesheet', type='text/css', href='/stylesheets/eventResult.css')
+  if eventId
+    script.
+      eventId = #{eventId};
+    script(src='/javascripts/app/controllers/ParkHeader.js')
+    script(src='/javascripts/app/controllers/ParkSearchResults.js')
+    script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlxgOSJGWPcYs-xkYGdaSY2jt-vg396E4&callback=initMap", type="text/javascript")
+
+block content
+  .container-fluid
+    if eventId
+      .row
+        #currentEvent.row
+          .col-md-10.col-xs-10
+            p.eventType
+            p.eventName
+            p.eventVenue
+        .col-md-9.col-xs-12#mapContainer
+        .col-md-3.col-xs-12#searchResultsContainer
+        
+    else
+      .row
+        .col-md-8.col-xs-12.col-md-offset-2
+          #parkSearchContainer
+            include modules/parkSearch.pug

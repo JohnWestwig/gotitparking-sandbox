@@ -1,0 +1,33 @@
+#modalSearchBar {
+  height: 50px;
+  font-size: 32px;
+  border: none;
+  border-bottom: 3px solid #B82601;
+  outline-width: 0;
+  width: 100%;
+  margin-bottom: 3px; }
+
+.autocomplete-suggestions {
+  border: 3px solid #B82601;
+  border-top: none;
+  background: #FFF;
+  overflow: auto; }
+
+.autocomplete-suggestion {
+  padding: 10px 5px;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.autocomplete-selected {
+  background: #F0F0F0; }
+
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF; }
+
+.autocomplete-group {
+  padding: 2px 5px; }
+
+.autocomplete-group strong {
+  display: block;
+  border-bottom: 1px solid #000; }

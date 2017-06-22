@@ -30,6 +30,7 @@ module.exports = function (app) {
         res.redirect('/home');
     });
 
+    router.get('/homev2', render("homev2", {}));
     router.get('/about', render("about", {}));
     router.get('/login', render("login", {}));
     router.get('/register', render("register", {}));
@@ -42,6 +43,9 @@ module.exports = function (app) {
         }
     });
     router.get('/profile/:section', render("profile", {}));
+    router.get('/profile/settings/:section', render("profile", {}));
+    
+    router.get('/park', render('park', {}));
 
     /* Send some default parameters to all layouts, merge with custom parameters. */
     function render(name, params) {
@@ -52,7 +56,8 @@ module.exports = function (app) {
                 user: req.body.user,
                 urlParams: JSON.stringify(req.query),
                 facebookAppId: app.locals.config.facebook.appId,
-                section: req.params.section
+                section: req.params.section,
+                eventId: req.query.eventId
             };
             Object.assign(defaultParams, params);
             res.render(name, defaultParams);

@@ -1,0 +1,58 @@
+#eventResultsContainer {
+    //padding-top: 10px;
+}
+.event-result {
+    //border: 2px solid red;
+    padding-bottom: 20px;
+}
+.event-result-date {
+    background: lighten(#B82601, 40%);
+    height: 100px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.event-result-date-day {
+    color: white;
+    font-weight: 100;
+    font-size: 36px;
+    padding-top: 5px;
+}
+.event-result-date-month {
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+.event-result-content {
+    background: #efeded;
+    height: 100px;
+}
+.event-result-sport {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.event-result-name {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.event-result-continue {
+    height: 100px;
+    line-height: 100px;
+}
+.event-result-continue:hover {
+    .event-result-continue-button {
+        transform: scale(1.1, 1.32);
+        color: lighten(#B82601, 35%);
+        cursor: pointer;
+    }
+}
+.event-result-continue-button {
+    transition: all .1s ease-in-out;
+    transform: scale(1, 1.2);
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    color: lighten(#B82601, 40%);
+}

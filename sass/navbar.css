@@ -1,6 +1,7 @@
-/*.popover {
-    max-width: 100%;
-}*/
+/* line 1, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+.popover {
+  z-index: 99999; }
+
 /* line 5, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
 .loginForm {
   display: none; }
@@ -13,5 +14,9 @@
 #navbarLogin {
   margin-left: 15px;
   margin-right: 15px; }
+
+/* line 18, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+nav > .container-fluid {
+  background: transparent; }
 
 /*# sourceMappingURL=navbar.css.map */

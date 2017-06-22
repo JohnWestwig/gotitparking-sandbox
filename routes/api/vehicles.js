@@ -5,9 +5,7 @@ var express = require('express'),
 module.exports = function (app, db) {
     router.get('/', function (req, res) {
         getVehicles(req.body.user.id, function (vehicles) {
-            res.status(200).json({
-                vehicles: vehicles
-            });
+            res.status(200).json(vehicles);
         }, function (errors) {
             apiError.send(res, errors);
         });
