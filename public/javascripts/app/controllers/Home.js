@@ -4,9 +4,9 @@ require.config({
 require(['./common'], function (common) {
     require(["jquery", "bootstrap"], function ($) {
         $(document).ready(function () {
-            $("#howItWorks .nextArrow").click(function () {
+            $(".nextArrow").click(function () {
                 $('html,body').animate({
-                    scrollTop: $("#howItWorks").offset().top
+                    scrollTop: $(this).parent().offset().top
                 }, 'slow');
             });
         });
