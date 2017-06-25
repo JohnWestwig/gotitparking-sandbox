@@ -6,8 +6,25 @@ append head
 block content
   .container-fluid
     .row
-      .col-md-6.col-xs-6#img-container-1
-        img.img-responsive(src="/images/ku_action.jpg")
-      .col-md-6.col-xs-6#img-container-2
-        img.img-responsive(src="/images/ku_action.jpg")
+      .col-md-6.col-xs-12.imgContainer.img-responsive#driverImgContainer
+        .textContainer
+          p.heading Gameday parking.  No sweat.
+          .row
+            .col-md-8.col-xs-8
+              p.info Find spots near the stadium and park, hassle-free.  GotIt! Parking covers all your gameday needs!
+            .col-md-4.col-xs-4
+              button.action(onclick='window.location.href = "/park"') Find a Spot
+          
+      .col-md-6.col-xs-12.imgContainer.img-responsive#homeownerImgContainer
+        .textContainer
+          p.heading Got some parking spots?
+          .row
+            .col-md-8.col-xs-8
+              p.info Offer your spots one time and just get paid on gameday.  We handle the rest.
+            .col-md-4.col-xs-4
+              button.action(onclick='window.location.href = "/sell"') Sell a Spot
+    .row#howItWorks
+      .nextArrow
+      .col-md-3
+        h1 How It Works
 

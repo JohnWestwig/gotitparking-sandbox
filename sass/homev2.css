@@ -1,7 +1,63 @@
 /* line 1, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
-#img-container-1, #img-container-1 > img-responsive,
-#img-container-2, #img-container-2 > img-responsive {
-  padding-left: 0;
-  padding-right: 0; }
+nav.navbar {
+  margin-bottom: 0; }
+
+/* line 4, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+.imgContainer {
+  height: 500px;
+  padding: 0; }
+  /* line 7, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  .imgContainer p {
+    color: white; }
+  /* line 10, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  .imgContainer .textContainer {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    width: 70%;
+    height: 35%; }
+    /* line 16, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    .imgContainer .textContainer p.heading {
+      font-size: 32px;
+      text-align: center; }
+    /* line 21, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    .imgContainer .textContainer p.info {
+      font-size: 18px; }
+    /* line 25, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    .imgContainer .textContainer button.action {
+      margin-top: 20px;
+      text-align: center;
+      background: transparent;
+      border: 3px solid white;
+      border-radius: 10px;
+      color: white;
+      height: 50px;
+      width: 130px;
+      font-size: 16px;
+      text-transform: uppercase; }
+    /* line 37, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    .imgContainer .textContainer button.action:hover {
+      color: #19B5FE;
+      font-weight: bold;
+      background: white; }
+    /* line 43, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    .imgContainer .textContainer button.action:focus {
+      outline: none; }
+
+/* line 48, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+#homeownerImgContainer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/homeowner1.jpg); }
+
+/* line 51, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+#driverImgContainer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/driver1.jpg); }
+
+/* line 54, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+#howItWorks {
+  background-color: #19B5FE;
+  height: 500px; }
+  /* line 57, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  #howItWorks h1 {
+    color: white; }
 
 /*# sourceMappingURL=homev2.css.map */
