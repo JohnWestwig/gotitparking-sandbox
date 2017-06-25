@@ -32,8 +32,6 @@ nav.navbar {
       color: #19B5FE;
       font-weight: bold;
       background: white; }
-    .imgContainer .textContainer button.action:focus {
-      outline: none; }
 
 #homeownerImgContainer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/homeowner1.jpg); }
@@ -46,3 +44,25 @@ nav.navbar {
   height: 500px; }
   #howItWorks h1 {
     color: white; }
+  #howItWorks .nextArrow {
+    border: none;
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: white;
+    height: 60px;
+    width: 60px;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box; }
+    #howItWorks .nextArrow i {
+      color: #19B5FE;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }

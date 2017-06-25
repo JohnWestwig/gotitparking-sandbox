@@ -1,16 +1,16 @@
 @import "custom_variables";
 @import "bootstrap";
 @import "bootstrap/theme";
-
 body {
     background: white;
 }
-
-.container{
+.container {
     padding: 10px;
     background: white;
 }
-
 .container-fluid {
     background: white;
+}
+button:focus {
+    outline: none;
 }
