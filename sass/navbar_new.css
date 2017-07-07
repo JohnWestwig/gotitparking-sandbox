@@ -1,0 +1,63 @@
+/* line 33, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+#navMenu {
+  display: inline-block;
+  border: none;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  top: 20px;
+  border-radius: 40px;
+  background: white;
+  height: 80px;
+  width: 80px;
+  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box; }
+  /* line 46, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+  #navMenu .menuItem {
+    display: none; }
+    /* line 49, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+    #navMenu .menuItem,
+    #navMenu .menuItem * {
+      opacity: 0;
+      transition: none; }
+    /* line 54, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+    #navMenu .menuItem p {
+      text-align: center; }
+  /* line 58, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+  #navMenu.expanded {
+    width: 295px; }
+    /* line 61, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+    #navMenu.expanded .menuItem {
+      display: inline-block;
+      cursor: pointer; }
+      /* line 63, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+      #navMenu.expanded .menuItem:hover {
+        transform: scale(1.1); }
+      /* line 68, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+      #navMenu.expanded .menuItem,
+      #navMenu.expanded .menuItem * {
+        opacity: 1; }
+  /* line 75, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+  #navMenu .expandMenu {
+    color: #19B5FE;
+    position: absolute;
+    top: 50%;
+    right: calc((80px - 36px) / 2);
+    transform: translate(0%, -50%);
+    cursor: pointer; }
+  /* line 83, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+  #navMenu .menuItem {
+    margin-top: 10px;
+    margin-right: 25px; }
+    /* line 86, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+    #navMenu .menuItem p {
+      color: #19B5FE; }
+  /* line 91, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new.scss */
+  #navMenu .menuItem:first-of-type {
+    margin-left: 30px; }
+
+/*# sourceMappingURL=navbar_new.css.map */

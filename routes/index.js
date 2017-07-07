@@ -30,7 +30,9 @@ module.exports = function (app) {
         res.redirect('/home');
     });
 
-    router.get('/homev2', render("homev2", {}));
+    router.get('/homev2', render("homev2", {
+        title: "Home"
+    }));
     router.get('/about', render("about", {}));
     router.get('/login', render("login", {}));
     router.get('/register', render("register", {}));

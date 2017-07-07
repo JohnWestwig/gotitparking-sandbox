@@ -2,21 +2,54 @@
 .popover {
   z-index: 99999; }
 
-/* line 5, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+/* line 4, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
 .loginForm {
   display: none; }
 
-/* line 9, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+/* line 7, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
 .loginForm.visible {
   display: block; }
 
-/* line 13, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+/* line 10, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
 #navbarLogin {
   margin-left: 15px;
   margin-right: 15px; }
 
-/* line 18, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+/* line 14, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
 nav > .container-fluid {
   background: transparent; }
+
+/* line 23, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+#navbarLogin {
+  text-align: center;
+  background: transparent;
+  border: 3px solid #19B5FE;
+  border-radius: 0 0 10px 10px;
+  color: #19B5FE;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-top: none;
+  padding-top: 8px; }
+
+/* line 35, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+#navbarLogin:hover,
+#navbarLogin:visited {
+  color: white;
+  font-weight: bold;
+  background: #19B5FE;
+  padding-top: 12px; }
+
+/* line 43, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+#headerNav {
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box; }
+  /* line 51, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar.scss */
+  #headerNav li.active,
+  #headerNav li.active > a {
+    background: #19B5FE; }
 
 /*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,163 @@
+/* line 1, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+.popover {
+  z-index: 99999; }
+
+/* line 4, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+.loginForm {
+  display: none; }
+
+/* line 7, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+.loginForm.visible {
+  display: block; }
+
+/* line 10, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navbarLogin {
+  padding: 3px;
+  text-align: center;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  height: 65%;
+  width: 65px;
+  font-size: 14px;
+  text-transform: uppercase; }
+  /* line 22, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navbarLogin:hover {
+    color: #19B5FE;
+    font-weight: bold;
+    background: white; }
+
+/* line 29, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navMenu {
+  height: 40px;
+  min-height: 35px;
+  text-align: right; }
+  /* line 30, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu .toggleMenu {
+    display: inline-block;
+    transition: opacity .2s; }
+    /* line 32, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+    #navMenu .toggleMenu i {
+      color: white; }
+    /* line 35, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+    #navMenu .toggleMenu .fa-remove {
+      display: none; }
+  /* line 40, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu,
+  #navMenu .container-fluid {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none; }
+  /* line 47, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu .container-fluid {
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    transition: padding-top .4s; }
+  /* line 56, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu img.brand-img {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translate(-50%, 0);
+    transition: width .2s, height .2s; }
+  /* line 63, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu .menuItem a {
+    text-shadow: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom: 5px; }
+    /* line 71, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+    #navMenu .menuItem a:hover {
+      text-decoration: none;
+      border-bottom: 7px solid #19B5FE; }
+  /* line 76, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu li {
+    float: left;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 10px 5px 10px; }
+  /* line 83, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu .vline {
+    display: inline-block;
+    width: 1px;
+    background: white; }
+  /* line 89, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu ul {
+    width: 70%;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block; }
+  /* line 95, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu ul.right {
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+    float: right; }
+    /* line 100, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+    #navMenu ul.right li {
+      float: right;
+      padding-top: 6px; }
+
+/* line 106, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navMenu.scrolling {
+  background: #333;
+  opacity: .85; }
+  /* line 109, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu.scrolling img.brand-img {
+    height: 30px;
+    transition: width .4s, height .4s; }
+  /* line 113, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu.scrolling .container-fluid {
+    padding-top: 0; }
+
+@media (max-width: 600px) {
+  /* line 118, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu .menuItem {
+    display: none; } }
+
+@media (min-width: 600px) {
+  /* line 123, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu .toggleMenu {
+    display: none; } }
+
+/* line 128, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navMenu.expanded ul.left {
+  width: 100%; }
+
+/* line 131, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navMenu.expanded img.brand-img, #navMenu.expanded ul.right {
+  display: none; }
+
+/* line 134, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navMenu.expanded li.menuItem {
+  display: inline-block; }
+
+/* line 138, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navMenu.expanded .toggleMenu .fa-bars {
+  display: none; }
+
+/* line 141, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navMenu.expanded .toggleMenu .fa-remove {
+  display: block; }
+
+/* line 147, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#footerContainer {
+  padding-top: 20px;
+  background: #bbb; }
+  /* line 150, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #footerContainer img.brand-img {
+    margin-bottom: 20px; }
+  /* line 153, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #footerContainer ul {
+    list-style-type: none; }
+  /* line 156, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #footerContainer a {
+    font-size: 20px; }
+
+/*# sourceMappingURL=navbar_new2.css.map */

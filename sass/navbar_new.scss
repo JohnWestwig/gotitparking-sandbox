@@ -1,0 +1,94 @@
+@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
+    -webkit-box-shadow: $horizontal $vertical $blur $color;
+    -moz-box-shadow: $horizontal $vertical $blur $color;
+    box-shadow: $horizontal $vertical $blur $color;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+}
+@mixin quantity-query( $number, $comparison: 'equal') {
+    $nth: '';
+    @if index( ('greater' 'more' '>'), $comparison) {
+        $nth: 'n + #{$number}';
+    }
+    @else if index( ('less' 'fewer' '<'), $comparison) {
+        $nth: '-n + #{$number}';
+    }
+    @else if index( ('equal' 'same' '='), $comparison) {
+        $nth: $number;
+    }
+    @else {
+        @warn "Sorry, that's an invalid $comparison value."
+    }
+    &:nth-last-child(#{$nth}):first-child {
+        &,
+        & ~ * {
+            @content;
+        }
+    }
+}
+$navMenuSize: 80px;
+$navMenuPageOffset: 20px;
+$numMenuItems: 3;
+#navMenu {
+    display: inline-block;
+    border: none;
+    position: fixed;
+    z-index: 999;
+    right: $navMenuPageOffset;
+    top: $navMenuPageOffset;
+    border-radius: $navMenuSize / 2;
+    background: white;
+    height: $navMenuSize;
+    width: $navMenuSize;
+    @include box-shadow(0px, 3px, 7px, rgba(0, 0, 0, 0.3));
+    //transition: width .3s;
+    .menuItem {
+        display: none;
+        //display: none;
+        &,
+        * {
+            opacity: 0;
+            transition: none;
+        }
+        p {
+            text-align: center;
+        }
+    }
+    &.expanded {
+        //transition: width .5s .5s;
+        width: $numMenuItems * 65px + $navMenuSize + 20px;
+        .menuItem {
+            display: inline-block;
+            &:hover {
+                transform: scale(1.1);
+            }
+            //display: inline-block;
+            cursor: pointer;
+            &,
+            * {
+                opacity: 1;
+                //transition: opacity .1s .1s;
+            }
+        }
+    }
+    .expandMenu {
+        color: #19B5FE;
+        position: absolute;
+        top: 50%;
+        right: calc((80px - 36px) / 2);
+        transform: translate(0%, -50%);
+        cursor: pointer;
+    }
+    .menuItem {
+        margin-top: 10px;
+        margin-right: 25px;
+        p {
+            color: #19B5FE;
+            //text-transform: uppercase;
+        }
+    }
+    .menuItem:first-of-type {
+        margin-left: 30px;
+    }
+}

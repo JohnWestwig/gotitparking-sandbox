@@ -3,7 +3,11 @@ require.config({
 });
 require(['./common'], function (common) {
     require(["jquery", "app/utils/auth", "bootstrap"], function ($, Auth) {
+        navbarScrollChange($(this));
         $(document).ready(function () {
+            $(document).scroll(function () {
+                navbarScrollChange($(this));
+            });
             $('#navbarLogin').popover({
                 content: function () {
                     var $loginForm = $('.loginForm').clone();
@@ -26,6 +30,14 @@ require(['./common'], function (common) {
             $('#navbarLogout').on('click', function () {
                 Auth.logout();
             });
+
+            $('#navMenu').on('click', '.menuItem', function () {
+                window.location.href = $(this).data('target') || window.location.href;
+            });
         });
     });
 });
+
+function navbarScrollChange(document) {
+    $('#navMenu').toggleClass('scrolling', document.scrollTop() > 30);
+}

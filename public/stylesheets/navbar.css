@@ -13,3 +13,32 @@
 
 nav > .container-fluid {
   background: transparent; }
+
+#navbarLogin {
+  text-align: center;
+  background: transparent;
+  border: 3px solid #19B5FE;
+  border-radius: 0 0 10px 10px;
+  color: #19B5FE;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-top: none;
+  padding-top: 8px; }
+
+#navbarLogin:hover,
+#navbarLogin:visited {
+  color: white;
+  font-weight: bold;
+  background: #19B5FE;
+  padding-top: 12px; }
+
+#headerNav {
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box; }
+  #headerNav li.active,
+  #headerNav li.active > a {
+    background: #19B5FE; }

@@ -4,22 +4,39 @@
 extends layout
 
 append head
-  link(rel='stylesheet', href='/stylesheets/navbar_new.css')
+  link(rel='stylesheet', href='/stylesheets/navbar_new2.css')
   script(src='/javascripts/app/navbar.js')
 
 block nav
-  #navMenu
-    .menuItem(data-target='/homev2')
-      i.fa.fa-home.fa-3x
-      p Home
-    .menuItem(data-target='/park')
-      i.fa.fa-car.fa-3x
-      p Park
-    .menuItem(data-target='/sell')
-      i.fa.fa-money.fa-3x
-      p Sell
-    .expandMenu(onclick='$("#navMenu").toggleClass("open"); $(this).toggleClass("open");')
-      i.fa.fa-bars.fa-3x(onclick='$("#navMenu").toggleClass("expanded");')
+  nav#navMenu.navbar.navbar-default.navbar-fixed-top
+    img(src="/images/logo.png", height="50").brand-img
+    .container-fluid
+      ul.left
+        li.toggleMenu(onclick='$("#navMenu").toggleClass("expanded");')
+          i.fa.fa-bars.fa-lg
+          i.fa.fa-remove.fa-lg
+        li.active.menuItem
+          a(href='#') Home
+        li.menuItem
+          a(href='#') Park
+        li.menuItem
+          a(href='#') Sell
+      ul.right
+        li
+          +loginForm
+          button#navbarLogin(data-container='body', data-toggle='popover', data-placement='bottom', data-content='') Login
+block footer
+  .container-fluid#footerContainer
+    .row
+      .col-md-3.col-xs-6
+        img(src="/images/logo.png", height="50").brand-img
+      .col-md-1.col-xs-2
+        a(href='/about') About
+      .col-md-1.col-xs-2
+        a(href='/settings') Settings
+      .col-md-1.col-xs-2
+        a(href='/faq') FAQ          
+        
   
   <!--nav#headerNav.navbar
     div.container-fluid
