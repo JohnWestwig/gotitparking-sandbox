@@ -43,7 +43,7 @@
   #navMenu .container-fluid {
     padding-right: 5px;
     padding-left: 5px;
-    padding-top: 5px;
+    padding-top: 0px;
     transition: padding-top .4s; }
   #navMenu img.brand-img {
     position: absolute;
@@ -85,13 +85,13 @@
       float: right;
       padding-top: 6px; }
 
-#navMenu.scrolling {
+#navMenu {
   background: #333;
-  opacity: .85; }
-  #navMenu.scrolling img.brand-img {
+  opacity: 1; }
+  #navMenu img.brand-img {
     height: 30px;
     transition: width .4s, height .4s; }
-  #navMenu.scrolling .container-fluid {
+  #navMenu .container-fluid {
     padding-top: 0; }
 
 @media (max-width: 600px) {
@@ -118,11 +118,11 @@
   display: block; }
 
 #footerContainer {
-  padding-top: 20px;
+  padding-top: 10px;
   background: #bbb; }
   #footerContainer img.brand-img {
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
   #footerContainer ul {
     list-style-type: none; }
   #footerContainer a {
-    font-size: 20px; }
+    font-size: 14px; }

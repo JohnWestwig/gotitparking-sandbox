@@ -23,12 +23,12 @@
 			return api;
 		};
 	}
-}(function () {
-	function extend () {
+})(function () {
+	function extend() {
 		var i = 0;
 		var result = {};
 		for (; i < arguments.length; i++) {
-			var attributes = arguments[ i ];
+			var attributes = arguments[i];
 			for (var key in attributes) {
 				result[key] = attributes[key];
 			}
@@ -36,8 +36,8 @@
 		return result;
 	}
 
-	function init (converter) {
-		function api (key, value, attributes) {
+	function init(converter) {
+		function api(key, value, attributes) {
 			var result;
 			if (typeof document === 'undefined') {
 				return;
@@ -67,8 +67,7 @@
 				} catch (e) {}
 
 				if (!converter.write) {
-					value = encodeURIComponent(String(value))
-						.replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent);
+					value = encodeURIComponent(String(value)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent);
 				} else {
 					value = converter.write(value, key);
 				}
@@ -89,7 +88,7 @@
 					}
 					stringifiedAttributes += '=' + attributes[attributeName];
 				}
-				return (document.cookie = key + '=' + value + stringifiedAttributes);
+				return document.cookie = key + '=' + value + stringifiedAttributes;
 			}
 
 			// Read
@@ -115,9 +114,7 @@
 
 				try {
 					var name = parts[0].replace(rdecode, decodeURIComponent);
-					cookie = converter.read ?
-						converter.read(cookie, name) : converter(cookie, name) ||
-						cookie.replace(rdecode, decodeURIComponent);
+					cookie = converter.read ? converter.read(cookie, name) : converter(cookie, name) || cookie.replace(rdecode, decodeURIComponent);
 
 					if (this.json) {
 						try {
@@ -162,4 +159,4 @@
 	}
 
 	return init(function () {});
-}));
+});

@@ -54,7 +54,7 @@
   #navMenu .container-fluid {
     padding-right: 5px;
     padding-left: 5px;
-    padding-top: 5px;
+    padding-top: 0px;
     transition: padding-top .4s; }
   /* line 56, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
   #navMenu img.brand-img {
@@ -104,60 +104,60 @@
       float: right;
       padding-top: 6px; }
 
-/* line 106, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
-#navMenu.scrolling {
+/* line 108, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+#navMenu {
   background: #333;
-  opacity: .85; }
-  /* line 109, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
-  #navMenu.scrolling img.brand-img {
+  opacity: 1; }
+  /* line 111, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu img.brand-img {
     height: 30px;
     transition: width .4s, height .4s; }
-  /* line 113, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
-  #navMenu.scrolling .container-fluid {
+  /* line 115, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  #navMenu .container-fluid {
     padding-top: 0; }
 
 @media (max-width: 600px) {
-  /* line 118, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  /* line 126, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
   #navMenu .menuItem {
     display: none; } }
 
 @media (min-width: 600px) {
-  /* line 123, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  /* line 131, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
   #navMenu .toggleMenu {
     display: none; } }
 
-/* line 128, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+/* line 136, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
 #navMenu.expanded ul.left {
   width: 100%; }
 
-/* line 131, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+/* line 139, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
 #navMenu.expanded img.brand-img, #navMenu.expanded ul.right {
   display: none; }
 
-/* line 134, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+/* line 142, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
 #navMenu.expanded li.menuItem {
   display: inline-block; }
 
-/* line 138, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+/* line 146, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
 #navMenu.expanded .toggleMenu .fa-bars {
   display: none; }
 
-/* line 141, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+/* line 149, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
 #navMenu.expanded .toggleMenu .fa-remove {
   display: block; }
 
-/* line 147, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+/* line 155, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
 #footerContainer {
-  padding-top: 20px;
+  padding-top: 10px;
   background: #bbb; }
-  /* line 150, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  /* line 158, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
   #footerContainer img.brand-img {
-    margin-bottom: 20px; }
-  /* line 153, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+    margin-bottom: 10px; }
+  /* line 161, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
   #footerContainer ul {
     list-style-type: none; }
-  /* line 156, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
+  /* line 164, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
   #footerContainer a {
-    font-size: 20px; }
+    font-size: 14px; }
 
 /*# sourceMappingURL=navbar_new2.css.map */

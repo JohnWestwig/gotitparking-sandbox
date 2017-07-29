@@ -12,8 +12,8 @@ module.exports = function (app, db) {
                 first: user.first_name,
                 last: user.last_name
             }
-        }, app.locals.config.jwt.secret, {
-            expiresIn: app.locals.config.jwt.apiExpiryTime
+        }, process.env.JWT_SECRET, {
+            expiresIn: process.env.JWT_EXPIRY_TIME_API
         });
         res.status(200).json({
             token: token

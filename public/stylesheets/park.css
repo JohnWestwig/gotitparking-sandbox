@@ -6,47 +6,127 @@
   background: transparent; }
 
 .container-fluid {
-  background: transparent; }
+  background: #333;
+  padding-top: 55px; }
 
 .navbar {
   margin-bottom: 0; }
 
 #mapContainer {
-  height: 800px; }
-
-#currentEvent {
-  position: absolute;
-  top: 70px;
-  left: 20px;
-  width: 400px;
-  background: white;
-  z-index: 9999;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
-  background-clip: padding-box; }
+  height: 750px;
+  position: fixed; }
 
 #searchResultsContainer {
   height: 800px;
   background: white;
-  z-index: 9999;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 99;
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box; }
+  #searchResultsContainer .toggleSearchResults {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 10px; }
+  #searchResultsContainer .toggleEventSearch {
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    cursor: pointer; }
+  #searchResultsContainer #eventInfoContainer {
+    border-left: 7px solid #ffb156;
+    padding-top: 5px;
+    margin-top: 5px; }
+    #searchResultsContainer #eventInfoContainer p.eventType {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 0; }
+    #searchResultsContainer #eventInfoContainer p.eventName,
+    #searchResultsContainer #eventInfoContainer p.eventVenue,
+    #searchResultsContainer #eventInfoContainer p.separator {
+      display: inline;
+      font-size: 12px; }
+    #searchResultsContainer #eventInfoContainer p.separator {
+      padding-right: 5px;
+      padding-left: 5px; }
+  #searchResultsContainer #searchResultsHeaderContainer {
+    padding-top: 20px; }
+    #searchResultsContainer #searchResultsHeaderContainer .hline {
+      border-bottom: 1px solid #000;
+      line-height: 0.1em; }
+    #searchResultsContainer #searchResultsHeaderContainer span {
+      background: #fff;
+      padding: 0 10px;
+      font-size: 16px;
+      font-weight: bold; }
+  #searchResultsContainer #expandSearchResultsContainer {
+    display: none; }
+  #searchResultsContainer #collapseSearchResultsContainer {
+    display: inline-block; }
 
-p.eventType,
-p.eventName,
-p.eventVenue {
-  padding: 6px; }
+#searchResultsContainer.collapsed #expandSearchResultsContainer {
+  display: inline-block; }
 
-p.eventType {
-  font-size: 20px;
-  margin-bottom: 0; }
+#searchResultsContainer.collapsed #collapseSearchResultsContainer {
+  display: none; }
+
+#offeringsContainer {
+  padding-top: 10px; }
+  #offeringsContainer hr {
+    margin-top: 7px;
+    margin-bottom: 12px;
+    width: 90%; }
+
+.sidebar-offering {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  .sidebar-offering:hover {
+    background: #e4f6ff; }
+  .sidebar-offering .sidebar-offering-price {
+    position: absolute;
+    transform: translate(0px, -8px);
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 10px;
+    font-size: 16px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #19B5FE;
+    color: white;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box; }
+  .sidebar-offering button.sidebar-offering-buy {
+    background: #ffb156;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box; }
+    .sidebar-offering button.sidebar-offering-buy:hover {
+      background: #ffbd6f; }
+  .sidebar-offering .sidebar-offering-address,
+  .sidebar-offering .sidebar-offering-walk-time {
+    margin-bottom: 0; }
+  .sidebar-offering .sidebar-offering-walk-time {
+    font-size: 12px; }
+    .sidebar-offering .sidebar-offering-walk-time i,
+    .sidebar-offering .sidebar-offering-walk-time img {
+      padding-right: 5px; }
+  .sidebar-offering .sidebar-offering-detail {
+    font-size: 10px; }
+
+.gm-style-iw {
+  overflow: hidden !important;
+  height: 55px !important; }

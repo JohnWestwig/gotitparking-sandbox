@@ -14,3 +14,8 @@ body {
 button:focus {
     outline: none;
 }
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}

@@ -26,10 +26,11 @@ nav.navbar {
       border-left: 7px solid #ffb156;
       padding-left: 10px;
       padding-top: 3px;
-      padding-bottom: 3px; }
-    /* line 31, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+      padding-bottom: 3px;
+      line-height: 1.25; }
+    /* line 32, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
     .imgContainer .textContainer button.action {
-      margin-top: 20px;
+      margin-top: 10px;
       text-align: center;
       background: transparent;
       border: 3px solid white;
@@ -39,86 +40,86 @@ nav.navbar {
       width: 130px;
       font-size: 16px;
       text-transform: uppercase; }
-    /* line 43, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    /* line 44, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
     .imgContainer .textContainer button.action:hover {
       color: #19B5FE;
       font-weight: bold;
       background: white; }
 
-/* line 51, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+/* line 52, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
 #homeownerImgContainer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(../images/homeowner1.jpg); }
 
-/* line 56, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+/* line 57, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
 #driverImgContainer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(../images/driver2.jpg); }
 
-/* line 61, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+/* line 62, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
 #howItWorks {
   padding-top: 150px;
   padding-bottom: 60px;
-  background-color: #19b5fe; }
-  /* line 62, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  background-color: white; }
+  /* line 63, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   #howItWorks .nextArrow {
     transform: translate(-50%, calc(-150px - 50%)); }
-  /* line 65, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 66, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   #howItWorks .dropdown-title {
     transform: translate(0, -150px); }
-  /* line 72, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 74, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   #howItWorks .horizontal-line {
     height: 2px;
     width: 20px;
     color: white; }
-  /* line 77, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 79, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   #howItWorks div.item {
     height: 300px; }
-    /* line 80, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    /* line 82, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
     #howItWorks div.item i {
       background: #ffb156;
-      padding: 30px;
+      padding: 20px;
       border-radius: 50%;
       color: white; }
-    /* line 86, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    /* line 88, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
     #howItWorks div.item p {
       margin-top: 20px;
       margin-left: 5%;
       margin-right: 5%;
-      color: white;
+      color: #19b5fe;
       text-align: center;
-      font-size: 20px; }
+      font-size: 16px; }
 
-/* line 97, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+/* line 99, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
 #benefits {
-  background-color: #ffb156;
+  background-color: #19b5fe;
   padding-top: 100px;
   padding-bottom: 60px; }
-  /* line 98, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 100, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   #benefits .nextArrow {
     transform: translate(-50%, calc(-100px - 50%)); }
-  /* line 101, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 103, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   #benefits .dropdown-title {
     transform: translate(0, -100px); }
-  /* line 108, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 110, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   #benefits h1 {
     color: #ffb156; }
-  /* line 111, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 113, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   #benefits .item {
     padding: 20px 0px 10px 0px; }
-    /* line 113, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    /* line 115, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
     #benefits .item i {
       padding: 30px;
       border-radius: 50%;
       color: white;
       height: 150px; }
-    /* line 120, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+    /* line 122, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
     #benefits .item p {
-      margin-top: 20px;
+      margin-top: 40px;
       margin-left: 5%;
       margin-right: 5%;
       color: white;
-      font-size: 20px; }
+      font-size: 16px; }
 
-/* line 132, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+/* line 134, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
 .nextArrow {
   border: none;
   position: absolute;
@@ -135,7 +136,7 @@ nav.navbar {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box; }
-  /* line 148, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 150, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   .nextArrow i {
     color: #19B5FE;
     position: absolute;
@@ -143,20 +144,20 @@ nav.navbar {
     left: 50%;
     transform: translate(-50%, -50%); }
 
-/* line 156, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+/* line 158, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
 .benefits-icon {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   border: 1px solid blue; }
-  /* line 161, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+  /* line 163, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
   .benefits-icon .fa {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
 
-/* line 168, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
+/* line 170, /Users/John/gotitparking/sandbox/gotitparking/sass/homev2.scss */
 .dropdown-title {
   position: absolute;
   margin-top: 25px;

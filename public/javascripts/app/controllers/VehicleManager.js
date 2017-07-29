@@ -19,36 +19,19 @@ require(['./common'], function (common) {
 
         function onSaveVehicleClicked(e) {
             if ($('.vehicle-id').val() != "") {
-                Vehicle.update(
-                    $('.vehicle-id').val(),
-                    $('.vehicle-make').val(),
-                    $('.vehicle-model').val(),
-                    $('.vehicle-color').val(),
-                    $('.vehicle-plate').val(),
-                    0,
-                    function () {
-                        $('#vehicleModal').modal('hide');
-                        loadAndDisplayVehicles();
-                    },
-                    function (errors) {
-                        console.log(errors);
-                    }
-                );
+                Vehicle.update($('.vehicle-id').val(), $('.vehicle-make').val(), $('.vehicle-model').val(), $('.vehicle-color').val(), $('.vehicle-plate').val(), 0, function () {
+                    $('#vehicleModal').modal('hide');
+                    loadAndDisplayVehicles();
+                }, function (errors) {
+                    console.log(errors);
+                });
             } else {
-                Vehicle.add(
-                    $('.vehicle-make').val(),
-                    $('.vehicle-model').val(),
-                    $('.vehicle-color').val(),
-                    $('.vehicle-plate').val(),
-                    0,
-                    function () {
-                        $('#vehicleModal').modal('hide');
-                        loadAndDisplayVehicles();
-                    },
-                    function (errors) {
-                        console.log(errors);
-                    }
-                );
+                Vehicle.add($('.vehicle-make').val(), $('.vehicle-model').val(), $('.vehicle-color').val(), $('.vehicle-plate').val(), 0, function () {
+                    $('#vehicleModal').modal('hide');
+                    loadAndDisplayVehicles();
+                }, function (errors) {
+                    console.log(errors);
+                });
             }
         }
 
@@ -75,10 +58,7 @@ require(['./common'], function (common) {
             var editVehicleLink = $('<a href="#">Edit</a>').addClass('pull-right').addClass('edit-vehicle');
             var deleteVehicleLink = $('<a href="#">Delete</a>').addClass('pull-right').addClass('delete-vehicle');
             var vehicleText = $('<span></span>').html('<b>' + vehicle.plate + '</b> ' + vehicle.color + " " + vehicle.make + " " + vehicle.model);
-            return $('<div></div>')
-                .addClass('list-group-item').addClass('vehicle-list-item')
-                .data("id", vehicle.id)
-                .append([vehicleText, deleteVehicleLink, editVehicleLink]);
+            return $('<div></div>').addClass('list-group-item').addClass('vehicle-list-item').data("id", vehicle.id).append([vehicleText, deleteVehicleLink, editVehicleLink]);
         }
 
         function loadAndDisplayVehicles() {
@@ -87,9 +67,7 @@ require(['./common'], function (common) {
                 vehicles.forEach(function (vehicle, i) {
                     $('.vehicle-list').append(makeVehicleListItem(vehicle));
                 });
-            }, function (errors) {
-
-            });
+            }, function (errors) {});
         }
     });
 });

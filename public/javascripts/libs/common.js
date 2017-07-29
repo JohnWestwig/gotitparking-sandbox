@@ -18,4 +18,3 @@ require.config({
     }
 });
 require(['fb']);
-

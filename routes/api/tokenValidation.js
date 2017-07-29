@@ -1,7 +1,7 @@
 var jwt = require('jsonwebtoken');
 
 module.exports = function (app, strict) {
-    var jwt_secret = app.locals.config.jwt.secret;
+    var jwt_secret = process.env.JWT_SECRET;
     return function (req, res, next) {
         var token = (req.body && req.body.token) || (req.query && req.query.token) || req.headers['x-token'];
         if (token) {

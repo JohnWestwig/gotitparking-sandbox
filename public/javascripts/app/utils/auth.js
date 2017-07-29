@@ -10,7 +10,7 @@ define(['jquery', 'app/utils/apiRequest', 'app/utils/tokenManager', 'facebook'],
     var onRegisterSuccess = function ($messageContainer) {
         $messageContainer.empty();
         $messageContainer.append($('<p></p>').addClass('text-success').text("A confirmation email has been sent to you.  Please click the link to finish registering."));
-    }
+    };
     var onAuthError = function ($messageContainer, errors) {
         console.log(errors);
         errors.forEach(function (error) {
@@ -40,7 +40,7 @@ define(['jquery', 'app/utils/apiRequest', 'app/utils/tokenManager', 'facebook'],
                     if (response.authResponse) {
                         console.log(response.authResponse);
                         ApiRequest.send('login/facebook', 'post', {
-                            facebookId: response.authResponse.userID,
+                            facebookId: response.authResponse.userID
                         }, function (data) {
                             onLoginSuccess(data.token, destination);
                         }, function (errors) {
@@ -79,8 +79,8 @@ define(['jquery', 'app/utils/apiRequest', 'app/utils/tokenManager', 'facebook'],
                     onRegisterSuccess($messageContainer);
                 }, function (errors) {
                     onAuthError($messageContainer, errors);
-                })
-            })
+                });
+            });
         },
         initRegisterFacebook: function ($registerFacebookButton, $messageContainer) {
             $registerFacebookButton.on('click', function (e) {
@@ -101,7 +101,7 @@ define(['jquery', 'app/utils/apiRequest', 'app/utils/tokenManager', 'facebook'],
                         });
                     }
                 }, {
-                    scope: 'email, public_profile',
+                    scope: 'email, public_profile'
                 });
             });
         }

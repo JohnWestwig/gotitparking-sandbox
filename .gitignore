@@ -1,5 +1,6 @@
 #Project specific
-#config/
+config/
+.brackets.json
 
 # Logs
 logs

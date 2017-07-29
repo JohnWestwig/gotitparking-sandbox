@@ -1,5 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var babel = require("gulp-babel");
+var mustache = require("gulp-mustache");
+
 
 var config = {
     bootstrapDir: './bower_components/bootstrap-sass',
@@ -32,4 +35,23 @@ gulp.task('watch', function () {
     gulp.watch('./sass/*.scss', ['css'])
 });
 
-gulp.task('default', ['css', 'scripts', 'fonts']);
+gulp.task('es6-regular', function () {
+    return gulp.src(config.publicDir + '/es6/**/*.!js').pipe(gulp.dest(config.publicDir + '/javascripts'));
+});
+
+gulp.task('es6', function () {
+    return gulp.src(config.publicDir + '/es6/**/*.js')
+        .pipe(babel())
+        .pipe(gulp.dest(config.publicDir + '/javascripts'));
+});
+
+gulp.task('mustache', function () {
+    return gulp.src("./templates/*.mustache")
+        .pipe(mustache({
+            msg: "Hello Gulp!"
+        }))
+        .pipe(gulp.dest("./dist"));
+});
+
+
+gulp.task('default', ['css', 'scripts', 'fonts', 'es6', 'es6-regular', 'mustache']);

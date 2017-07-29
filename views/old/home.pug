@@ -1,0 +1,42 @@
+extends layout-nav
+
+append head
+  link(rel='stylesheet', href='/stylesheets/home.css')
+
+block content
+  .container-fluid
+    .row
+      .col-md-7.col-xs-12
+        img.img-responsive.img-rounded(src='/images/ku_action.jpg')
+      .col-md-5.col-xs-12
+        h1 GotIt! Parking
+        hr
+        p.text-primary Welcome to the future
+        p Park where you want, when you want, hassle-free.  GotIt! Parking provides a simple, intuitive platform for parkers and owners alike
+        .row
+          .col-md-12.col-xs-12.text-center
+            +linkWithArrow('/about', 'Learn More').btn.btn-primary.btn-lg
+    hr
+    .row
+      .col-md-4
+        h3
+          i.fa.fa-car.fa-lg
+          |
+          | Looking to park?
+          +linkWithArrow('/buy', 'Buy').btn.btn-primary.btn-sm.pull-right
+        p.justified Parking for the big game is tough.  GotIt! Parking lets you find the perfect spot to tailgate and hand with friends, hassle-free.  Learn to love the simplicity of GotIt! Parking and get parking!
+      .col-md-4
+        h3
+          i.fa.fa-home.fa-lg
+          |
+          | Have a spot to sell?
+          +linkWithArrow('/sell', 'Sell').btn.btn-primary.btn-sm.pull-right
+        p.justified Do you own a home near the stadium? Want to earn easy money at the touch of a button? GotIt! Parking's simple, intuitive interface and flexible platform allows you to manage gameday from the comfort of your own home.
+      .col-md-4
+        h3
+          i.fa.fa-lightbulb-o.fa-lg
+          |
+          | Questions?
+          +linkWithArrow('/faq', 'Ask us Anything').btn.btn-primary.btn-sm.pull-right
+        p.justified Visit our FAQ page to get answers to common questions about GotIt! Parking, or get in contact with us via e-mail or phone.
+  

@@ -1,7 +1,7 @@
 define(['jquery', 'app/utils/tokenManager'], function ($, TokenManager) {
     return {
         send: function (url, method, data, success, failure) {
-            var url = '/api/' + url; 
+            var url = '/api/' + url;
             var method = method.toUpperCase();
             var token = TokenManager.getToken();
             console.log(method + " " + url, data);

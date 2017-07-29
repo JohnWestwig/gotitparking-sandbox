@@ -18,11 +18,7 @@ require(['./common'], function (common) {
             });
 
             $('#navbarLogin').on('inserted.bs.popover', function () {
-                Auth.initLogin(
-                    $('#loginForm').find('.loginButton'),
-                    $('#loginForm').find('.loginEmail'),
-                    $('#loginForm').find('.loginPassword'),
-                    $('#loginForm').find('.loginErrors'));
+                Auth.initLogin($('#loginForm').find('.loginButton'), $('#loginForm').find('.loginEmail'), $('#loginForm').find('.loginPassword'), $('#loginForm').find('.loginErrors'));
 
                 Auth.initLoginFacebook($('#loginForm').find('.loginFacebookButton'));
             });

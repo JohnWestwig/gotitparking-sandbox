@@ -8,7 +8,7 @@ module.exports = function (app) {
         var token = req.headers['x-token'] || req.cookies.token;
         console.log("token", token);
         if (token) {
-            jwt.verify(token, app.locals.config.jwt.secret, function (error, decoded) {
+            jwt.verify(token, process.env.JWT_SECRET, function (error, decoded) {
                 if (!error) {
                     console.log(decoded);
                     req.body.user = decoded;
@@ -30,23 +30,15 @@ module.exports = function (app) {
         res.redirect('/home');
     });
 
-    router.get('/homev2', render("homev2", {
-        title: "Home"
-    }));
     router.get('/about', render("about", {}));
     router.get('/login', render("login", {}));
     router.get('/register', render("register", {}));
-    router.get(['/home', '/home/test'], render("home", {}));
+    router.get('/home', render("home", {}));
     router.get('/profile', function (req, res) {
-        if (req.body.user) {
-            res.redirect('/profile/activity');
-        } else {
-            res.redirect('/profile/privacy');
-        }
+        res.redirect(req.body.user ? '/profile/activity' : '/profile/privacy');
     });
     router.get('/profile/:section', render("profile", {}));
     router.get('/profile/settings/:section', render("profile", {}));
-    
     router.get('/park', render('park', {}));
 
     /* Send some default parameters to all layouts, merge with custom parameters. */
@@ -57,7 +49,7 @@ module.exports = function (app) {
                 title: name.charAt(0).toUpperCase() + name.slice(1),
                 user: req.body.user,
                 urlParams: JSON.stringify(req.query),
-                facebookAppId: app.locals.config.facebook.appId,
+                facebookAppId: process.env.FACEBOOK_APP_ID,
                 section: req.params.section,
                 eventId: req.query.eventId
             };

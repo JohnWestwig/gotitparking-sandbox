@@ -6,10 +6,10 @@ define(['jquery', 'app/utils/apiRequest'], function ($, ApiRequest) {
                 model: model,
                 color: color,
                 plate: plate,
-                isDefault: isDefault,
+                isDefault: isDefault
             }, success, error);
         },
-        get: function(id, success, error) {
+        get: function (id, success, error) {
             ApiRequest.send('vehicles/' + id, 'get', {}, success, error);
         },
         load: function (success, error) {
@@ -24,7 +24,7 @@ define(['jquery', 'app/utils/apiRequest'], function ($, ApiRequest) {
                 model: model,
                 color: color,
                 plate: plate,
-                isDefault: isDefault,
+                isDefault: isDefault
             }, success, error);
         }
     };

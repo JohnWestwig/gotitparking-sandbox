@@ -16,12 +16,12 @@ require(['./common'], function (common) {
                                 data: school.id
                             };
                         })
-                    }
+                    };
                 },
                 autoSelectFirst: true,
                 onSelect: onSchoolChosen
             });
-            
+
             $('#eventResultsContainer').on('click', '.event-result-continue-button', function (e) {
                 e.preventDefault();
                 window.location.href = "/park?eventId=" + $(this).data('event-id');

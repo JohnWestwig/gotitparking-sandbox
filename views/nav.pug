@@ -16,11 +16,11 @@ block nav
           i.fa.fa-bars.fa-lg
           i.fa.fa-remove.fa-lg
         li.active.menuItem
-          a(href='#') Home
+          a(href='/home') Home
         li.menuItem
-          a(href='#') Park
+          a(href='/park') Park
         li.menuItem
-          a(href='#') Sell
+          a(href='/sell') Sell
       ul.right
         li
           +loginForm
@@ -29,12 +29,12 @@ block footer
   .container-fluid#footerContainer
     .row
       .col-md-3.col-xs-6
-        img(src="/images/logo.png", height="50").brand-img
-      .col-md-1.col-xs-2
+        img(src="/images/logo.png", height="30").brand-img
+      .col-md-1.col-xs-2.text-center.pull-right
         a(href='/about') About
-      .col-md-1.col-xs-2
+      .col-md-1.col-xs-2.text-center.pull-right
         a(href='/settings') Settings
-      .col-md-1.col-xs-2
+      .col-md-1.col-xs-2.text-center.pull-right
         a(href='/faq') FAQ          
         
   

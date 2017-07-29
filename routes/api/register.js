@@ -8,7 +8,7 @@ const nodemailer = require('nodemailer');
 
 
 module.exports = function (app, db) {
-    var jwtSecret = app.locals.config.jwt.secret;
+    var jwtSecret = process.env.JWT_SECRET;
     router.post('/', function (req, res) {
         var email = req.body.email,
             password = req.body.password,
@@ -32,7 +32,7 @@ module.exports = function (app, db) {
                     expiresIn: '1h'
                 });
                 /* TODO: catch email errors */
-                sendRegistrationEmail(app.locals.config.email.address, app.locals.config.email.password, email, token);
+                sendRegistrationEmail(process.env.EMAIL_ADDRESS, process.env.EMAIL_PASSWORD, email, token);
                 res.send(200);
             }, function (codes) {
                 apiError.send(res, codes);

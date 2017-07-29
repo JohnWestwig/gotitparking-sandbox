@@ -1,4 +1,4 @@
-extends layout-nav
+extends nav
 
 append head
   link(rel='stylesheet', type='text/css', href='/stylesheets/park.css')
@@ -12,18 +12,21 @@ append head
 
 block content
   .container-fluid
-    if eventId
-      .row
-        #currentEvent.row
-          .col-md-10.col-xs-10
+    .row
+      .col-md-9.col-xs-12#mapContainer
+      .col-md-3.col-xs-12#searchResultsContainer
+        .row
+          .col-md-10.col-xs-10#eventInfoContainer
             p.eventType
-            p.eventName
-            p.eventVenue
-        .col-md-9.col-xs-12#mapContainer
-        .col-md-3.col-xs-12#searchResultsContainer
-        
-    else
-      .row
-        .col-md-8.col-xs-12.col-md-offset-2
-          #parkSearchContainer
-            include modules/parkSearch.pug
+            span
+              p.eventName
+              p.separator •
+              p.eventVenue
+          .col-md-2.col-xs-2.text-right#toggleEventSearchContainer
+            i.fa.fa-search.fa-2x.fa-fw.toggleEventSearch
+        .row
+          .col-md-12.col-xs-12.text-center#searchResultsHeaderContainer
+            p.hline
+              span Available Spots
+        #offeringsContainer
+  +modal("Test", "searchModal")
