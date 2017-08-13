@@ -1,29 +1,32 @@
-/* line 1, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 2, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 #parkSearchContainer {
   background: white;
   margin-top: 50px; }
 
-/* line 5, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 6, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 .row {
   background: transparent; }
 
-/* line 8, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 9, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 .container-fluid {
   background: #333;
-  padding-top: 55px; }
+  padding-top: 30px; }
 
-/* line 13, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 14, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 .navbar {
   margin-bottom: 0; }
 
-/* line 16, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 17, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 #mapContainer {
-  height: 750px;
-  position: fixed; }
+  height: calc(100vh - 30px); }
+  @media only screen and (max-width: 479px) {
+    /* line 17, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+    #mapContainer {
+      height: 50vh; } }
 
-/* line 20, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 24, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 #searchResultsContainer {
-  height: 800px;
+  min-height: calc(100vh - 30px);
   background: white;
   z-index: 99;
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
@@ -32,134 +35,50 @@
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   background-clip: padding-box; }
-  /* line 31, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+  /* line 35, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
   #searchResultsContainer .toggleSearchResults {
     cursor: pointer;
     padding-left: 10px;
     padding-top: 10px; }
-  /* line 36, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+  /* line 40, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+  #searchResultsContainer #toggleEventSearchContainer {
+    margin-top: 10px; }
+  /* line 43, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
   #searchResultsContainer .toggleEventSearch {
     float: right;
     padding-right: 10px;
     padding-top: 10px;
     cursor: pointer; }
-  /* line 42, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-  #searchResultsContainer #eventInfoContainer {
-    border-left: 7px solid #ffb156;
-    padding-top: 5px;
-    margin-top: 5px; }
-    /* line 47, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-    #searchResultsContainer #eventInfoContainer p.eventType {
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 0; }
-    /* line 52, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-    #searchResultsContainer #eventInfoContainer p.eventName,
-    #searchResultsContainer #eventInfoContainer p.eventVenue,
-    #searchResultsContainer #eventInfoContainer p.separator {
-      display: inline;
-      font-size: 12px; }
-    /* line 58, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-    #searchResultsContainer #eventInfoContainer p.separator {
-      padding-right: 5px;
-      padding-left: 5px; }
-  /* line 63, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+  /* line 49, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
   #searchResultsContainer #searchResultsHeaderContainer {
     padding-top: 20px; }
-    /* line 65, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+    /* line 51, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
     #searchResultsContainer #searchResultsHeaderContainer .hline {
       border-bottom: 1px solid #000;
       line-height: 0.1em; }
-    /* line 69, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+    /* line 55, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
     #searchResultsContainer #searchResultsHeaderContainer span {
       background: #fff;
       padding: 0 10px;
       font-size: 16px;
       font-weight: bold; }
-  /* line 76, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+  /* line 62, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
   #searchResultsContainer #expandSearchResultsContainer {
     display: none; }
-  /* line 79, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+  /* line 65, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
   #searchResultsContainer #collapseSearchResultsContainer {
     display: inline-block; }
 
-/* line 85, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 71, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 #searchResultsContainer.collapsed #expandSearchResultsContainer {
   display: inline-block; }
 
-/* line 88, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 74, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 #searchResultsContainer.collapsed #collapseSearchResultsContainer {
   display: none; }
 
-/* line 92, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
+/* line 78, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
 #offeringsContainer {
   padding-top: 10px; }
-  /* line 96, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-  #offeringsContainer hr {
-    margin-top: 7px;
-    margin-bottom: 12px;
-    width: 90%; }
-
-/* line 103, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-.sidebar-offering {
-  padding-top: 5px;
-  padding-bottom: 5px; }
-  /* line 108, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-  .sidebar-offering:hover {
-    background: #e4f6ff; }
-  /* line 111, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-  .sidebar-offering .sidebar-offering-price {
-    position: absolute;
-    transform: translate(0px, -8px);
-    padding: 7px;
-    padding-left: 12px;
-    padding-right: 10px;
-    font-size: 16px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background: #19B5FE;
-    color: white;
-    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding-box;
-    background-clip: padding-box; }
-  /* line 130, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-  .sidebar-offering button.sidebar-offering-buy {
-    background: #ffb156;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin-top: 10px;
-    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding-box;
-    background-clip: padding-box; }
-    /* line 143, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-    .sidebar-offering button.sidebar-offering-buy:hover {
-      background: #ffbd6f; }
-  /* line 147, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-  .sidebar-offering .sidebar-offering-address,
-  .sidebar-offering .sidebar-offering-walk-time {
-    margin-bottom: 0; }
-  /* line 151, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-  .sidebar-offering .sidebar-offering-walk-time {
-    font-size: 12px; }
-    /* line 152, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-    .sidebar-offering .sidebar-offering-walk-time i,
-    .sidebar-offering .sidebar-offering-walk-time img {
-      padding-right: 5px; }
-  /* line 158, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-  .sidebar-offering .sidebar-offering-detail {
-    font-size: 10px; }
-
-/* line 163, /Users/John/gotitparking/sandbox/gotitparking/sass/park.scss */
-.gm-style-iw {
-  overflow: hidden !important;
-  height: 55px !important; }
 
 /*# sourceMappingURL=park.css.map */

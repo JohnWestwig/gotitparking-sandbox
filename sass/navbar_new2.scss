@@ -134,9 +134,9 @@
 }
 #navMenu.expanded {
     ul.left {
-        width: 100%;
+        //width: 70%;
     }
-    img.brand-img, ul.right {
+    img.brand-img {
         display: none;
     }
     li.menuItem {

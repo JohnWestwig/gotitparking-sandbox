@@ -1,0 +1,16 @@
+#eventInfoContainer {
+  border-left: 7px solid #ffb156;
+  padding-top: 5px;
+  margin-top: 15px; }
+  #eventInfoContainer p.eventType {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0; }
+  #eventInfoContainer p.eventName,
+  #eventInfoContainer p.eventVenue,
+  #eventInfoContainer p.separator {
+    display: inline;
+    font-size: 12px; }
+  #eventInfoContainer p.separator {
+    padding-right: 5px;
+    padding-left: 5px; }

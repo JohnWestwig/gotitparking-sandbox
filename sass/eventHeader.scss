@@ -1,0 +1,21 @@
+    #eventInfoContainer {
+        border-left: 7px solid lighten(#FFA53C, 5%);
+        padding-top: 5px;
+        margin-top: 15px;
+        //padding-left: 20px;
+        p.eventType {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        p.eventName,
+        p.eventVenue,
+        p.separator {
+            display: inline;
+            font-size: 12px;
+        }
+        p.separator {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    }

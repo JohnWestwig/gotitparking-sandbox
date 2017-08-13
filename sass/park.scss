@@ -1,3 +1,4 @@
+@import "custom_variables";
 #parkSearchContainer {
     background: white;
     margin-top: 50px;
@@ -7,18 +8,21 @@
 }
 .container-fluid {
     background: #333;
-    padding-top: 55px;
+    padding-top: 30px;
     //padding: 0;
 }
 .navbar {
     margin-bottom: 0;
 }
 #mapContainer {
-    height: 750px;
-    position: fixed;
+    height: calc(100vh - 30px);
+    @media #{$smartphones} {
+        height: 50vh;
+    }
+    //position: fixed;
 }
 #searchResultsContainer {
-    height: 800px;
+    min-height: calc(100vh - 30px);
     background: white;
     z-index: 99;
     //border-radius: 5px;
@@ -33,32 +37,14 @@
         padding-left: 10px;
         padding-top: 10px;
     }
+    #toggleEventSearchContainer {
+        margin-top: 10px;
+    }
     .toggleEventSearch {
         float: right;
         padding-right: 10px;
         padding-top: 10px;
         cursor: pointer;
-    }
-    #eventInfoContainer {
-        border-left: 7px solid lighten(#FFA53C, 5%);
-        padding-top: 5px;
-        margin-top: 5px;
-        //padding-left: 20px;
-        p.eventType {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 0;
-        }
-        p.eventName,
-        p.eventVenue,
-        p.separator {
-            display: inline;
-            font-size: 12px;
-        }
-        p.separator {
-            padding-right: 5px;
-            padding-left: 5px;
-        }
     }
     #searchResultsHeaderContainer {
         padding-top: 20px;
@@ -90,81 +76,5 @@
     }
 }
 #offeringsContainer {
-    //overflow-y: scroll;
-    //overflow-x: auto;
     padding-top: 10px;
-    hr {
-        margin-top: 7px;
-        margin-bottom: 12px;
-        width: 90%;
-    }
-}
-
-.sidebar-offering {
-    //border-left: 7px solid #19B5FE;
-    //margin-bottom: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    &:hover {
-        background: lighten(#19B5FE, 40%);
-    }
-    .sidebar-offering-price {
-        position: absolute;
-        transform: translate(0px, -8px);
-        //height: 50px;
-        padding: 7px;
-        padding-left: 12px;
-        padding-right: 10px;
-        font-size: 16px;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-        background: #19B5FE;
-        color: white;
-        -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-        -webkit-background-clip: padding-box;
-        -moz-background-clip: padding-box;
-        background-clip: padding-box;
-    }
-    button.sidebar-offering-buy {
-        background: lighten(#FFA53C, 5%);
-        border-radius: 5px;
-        border: none;
-        color: white;
-        padding: 10px;
-        margin-top: 10px;
-        -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-        -webkit-background-clip: padding-box;
-        -moz-background-clip: padding-box;
-        background-clip: padding-box;
-        &:hover {
-            background: lighten(#FFA53C, 10%);
-        }
-    }
-    .sidebar-offering-address,
-    .sidebar-offering-walk-time {
-        margin-bottom: 0;
-    }
-    .sidebar-offering-walk-time {
-        i,
-        img {
-            padding-right: 5px;
-        }
-        font-size: 12px;
-    }
-    .sidebar-offering-detail {
-        font-size: 10px;
-    }
-}
-
-.gm-style-iw {
-    overflow:hidden!important;
-    height:55px!important; //for 3 lines of text in the InfoWindow
-}
-
-#searchModal {
-    
 }

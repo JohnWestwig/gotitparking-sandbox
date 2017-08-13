@@ -102,10 +102,7 @@
   #navMenu .toggleMenu {
     display: none; } }
 
-#navMenu.expanded ul.left {
-  width: 100%; }
-
-#navMenu.expanded img.brand-img, #navMenu.expanded ul.right {
+#navMenu.expanded img.brand-img {
   display: none; }
 
 #navMenu.expanded li.menuItem {

@@ -1,0 +1,49 @@
+.sidebar-offering {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  .sidebar-offering.highlighted {
+    background: #FFFBCC; }
+  .sidebar-offering:hover {
+    background: #e4f6ff; }
+  .sidebar-offering .sidebar-offering-price {
+    position: absolute;
+    transform: translate(0px, -8px);
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 10px;
+    font-size: 16px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #19B5FE;
+    color: white;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box; }
+  .sidebar-offering button.sidebar-offering-buy {
+    background: #ffb156;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box; }
+    .sidebar-offering button.sidebar-offering-buy:hover {
+      background: #ffbd6f; }
+  .sidebar-offering .sidebar-offering-address,
+  .sidebar-offering .sidebar-offering-walk-time {
+    margin-bottom: 0; }
+  .sidebar-offering .sidebar-offering-walk-time {
+    font-size: 12px; }
+    .sidebar-offering .sidebar-offering-walk-time i,
+    .sidebar-offering .sidebar-offering-walk-time img {
+      padding-right: 5px; }
+  .sidebar-offering .sidebar-offering-detail {
+    font-size: 10px; }

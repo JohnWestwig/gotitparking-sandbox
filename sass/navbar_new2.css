@@ -126,12 +126,8 @@
   #navMenu .toggleMenu {
     display: none; } }
 
-/* line 136, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
-#navMenu.expanded ul.left {
-  width: 100%; }
-
 /* line 139, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */
-#navMenu.expanded img.brand-img, #navMenu.expanded ul.right {
+#navMenu.expanded img.brand-img {
   display: none; }
 
 /* line 142, /Users/John/gotitparking/sandbox/gotitparking/sass/navbar_new2.scss */

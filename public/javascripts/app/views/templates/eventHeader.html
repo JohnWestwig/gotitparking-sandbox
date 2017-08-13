@@ -1,0 +1,13 @@
+<link type="text/css" rel="stylesheet" href="/stylesheets/eventHeader.css">
+<!-- @params event {type, name, venue {name}} -->
+<div id='eventInfoContainer' class='col-md-10 col-xs-10'>
+    <p class="eventType"><%= event.type %></p>
+    <span>
+        <p class="eventName"><%= event.name %></p>
+        <p class="separator">•</p>
+        <p class="eventVenue"><%= event.venueName %></p>
+    </span>
+</div>  
+<div id="toggleEventSearchContainer">
+    <i class="fa fa-search fa-2x fa-fw toggleEventSearch"></i>
+</div>

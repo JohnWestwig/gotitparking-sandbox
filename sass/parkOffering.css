@@ -1,0 +1,61 @@
+/* line 1, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+.sidebar-offering {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  /* line 6, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+  .sidebar-offering.highlighted {
+    background: #FFFBCC; }
+  /* line 9, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+  .sidebar-offering:hover {
+    background: #e4f6ff; }
+  /* line 12, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+  .sidebar-offering .sidebar-offering-price {
+    position: absolute;
+    transform: translate(0px, -8px);
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 10px;
+    font-size: 16px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #19B5FE;
+    color: white;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box; }
+  /* line 31, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+  .sidebar-offering button.sidebar-offering-buy {
+    background: #ffb156;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box; }
+    /* line 44, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+    .sidebar-offering button.sidebar-offering-buy:hover {
+      background: #ffbd6f; }
+  /* line 48, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+  .sidebar-offering .sidebar-offering-address,
+  .sidebar-offering .sidebar-offering-walk-time {
+    margin-bottom: 0; }
+  /* line 52, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+  .sidebar-offering .sidebar-offering-walk-time {
+    font-size: 12px; }
+    /* line 53, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+    .sidebar-offering .sidebar-offering-walk-time i,
+    .sidebar-offering .sidebar-offering-walk-time img {
+      padding-right: 5px; }
+  /* line 59, /Users/John/gotitparking/sandbox/gotitparking/sass/parkOffering.scss */
+  .sidebar-offering .sidebar-offering-detail {
+    font-size: 10px; }
+
+/*# sourceMappingURL=parkOffering.css.map */
